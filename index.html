@@ -72,7 +72,7 @@
 
 <!-- ── NAVBAR ─────────────────────────────────── -->
 <nav id="navbar" class="fixed top-0 w-full z-50 bg-[#121212]/90 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.4)]">
-  <div class="flex justify-between items-center w-full px-8 py-5 max-w-screen-2xl mx-auto">
+  <div class="flex justify-between items-center w-full px-4 md:px-8 py-4 md:py-5 max-w-screen-2xl mx-auto">
 
     <!-- Logo -->
     <a href="#inicio" class="text-3xl font-extrabold italic tracking-tighter text-white font-headline uppercase">
@@ -113,13 +113,13 @@
 <main>
 
 <!-- ── HERO ───────────────────────────────────── -->
-<section id="inicio" class="relative bg-[#121212] min-h-screen flex items-center pt-32 pb-24 px-6 md:px-12 overflow-hidden">
+<section id="inicio" class="relative bg-[#121212] min-h-screen flex items-center pt-28 pb-10 md:pb-24 px-6 md:px-12 overflow-hidden">
   <!-- Glow background -->
   <div class="absolute inset-0 opacity-10 pointer-events-none">
     <div class="absolute w-[800px] h-[800px] bg-[#ffcf00] rounded-full blur-[120px] -top-[400px] left-1/2 -translate-x-1/2"></div>
   </div>
 
-  <div class="max-w-screen-xl mx-auto w-full flex flex-col items-center gap-12 relative z-10">
+  <div class="max-w-screen-xl mx-auto w-full flex flex-col items-center gap-6 md:gap-12 relative z-10">
     <!-- Logo image -->
     <img
       alt="PAPALONES Logo"
@@ -128,7 +128,7 @@
       src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX-skN6idND_CtisOs9FxXmyT3d6CRDOzIeKHbxQil1ksffQh3nxOPzNTFyalHsifvdC6GlkSWVVO5CdhvNvpEIo-Hoq11v3HTLMRw7D5QT5g9e5rxUEepcENp0zAyTHbmYFrOQDuXwyuYIHgwE-mm4Ts7nAMtbJomeam3TpP8ZZiXNN_Iq74c4aImB9VSwVkOmwicpovT9zRj4KI9XpEigsdCJg28qEsaaDx2_aZ9N9k7aXG1iEueXvOGC600wsiFEl4-ABLInKO_fA">
 
     <!-- Headline -->
-    <h1 class="font-headline font-extrabold text-6xl md:text-8xl lg:text-9xl text-[#ffcf00] uppercase tracking-tighter leading-[0.9] text-center max-w-5xl">
+    <h1 class="font-headline font-extrabold text-4xl sm:text-5xl md:text-8xl lg:text-9xl text-[#ffcf00] uppercase tracking-tighter leading-[0.95] md:leading-[0.9] text-center max-w-5xl">
       la parte crujiente que tu evento necesita !!!
     </h1>
 
@@ -141,7 +141,7 @@
     </a>
 
     <!-- Hero image -->
-    <div class="relative w-full max-w-4xl mt-8">
+    <div class="relative w-full max-w-4xl mt-2 md:mt-8">
       <div class="absolute inset-0 bg-gradient-to-tr from-[#ffcf00]/20 to-transparent rounded-3xl opacity-50 blur-2xl -z-10 translate-x-4 translate-y-4"></div>
       <img
         alt="Comida PAPALONES"
@@ -152,12 +152,12 @@
 </section>
 
 <!-- ── MENÚ ────────────────────────────────────── -->
-<section id="menu" class="pt-32 pb-24 px-6 md:px-12 relative bg-gradient-to-b from-[#121212] via-[#1a1a1a] to-[#121212]">
+<section id="menu" class="pt-10 md:pt-32 pb-10 md:pb-24 px-2 md:px-12 relative bg-gradient-to-b from-[#121212] via-[#1a1a1a] to-[#121212]">
   <div class="max-w-screen-2xl mx-auto w-full">
 
     <!-- Section header -->
-    <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
-      <h2 class="font-headline font-extrabold text-6xl md:text-8xl text-white uppercase tracking-tighter w-full md:w-2/3 leading-[0.85]">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-20 gap-3 md:gap-6">
+      <h2 class="font-headline font-extrabold text-4xl sm:text-5xl md:text-8xl text-white uppercase tracking-tighter w-full md:w-2/3 leading-[0.9] md:leading-[0.85]">
         Nuestro menú<br><span class="text-[#ffcf00] italic">&amp; cotizaciones</span>
       </h2>
       <p class="font-body text-gray-400 text-xl w-full md:w-1/3 text-left md:text-right font-medium italic">
@@ -166,72 +166,76 @@
     </div>
 
     <!-- Products grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+    <div class="grid grid-cols-2 gap-3 md:gap-8 lg:gap-12">
 
       <!-- Papas Fritas -->
-      <div class="group relative overflow-hidden rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col md:flex-row h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
-        <div class="md:w-1/2 h-[300px] md:h-auto overflow-hidden">
+      <div class="group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
+        <div class="h-[140px] md:h-[260px] overflow-hidden">
           <img alt="Papas Fritas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             src="papas.jpg">
         </div>
-        <div class="md:w-1/2 p-10 flex flex-col justify-center">
-          <h3 class="font-headline font-extrabold text-4xl text-white uppercase tracking-tighter mb-4 italic">🍟 Papas Fritas</h3>
-          <p class="font-body text-gray-400 text-lg leading-relaxed">Papas fritas clásicas, delgadas y crujientes, en porciones de 90 gramos en bolsas papel mantequilla. Combínalas con Ketchup, Mayonesa y Mostaza.</p>
+        <div class="p-3 md:p-10 flex flex-col justify-center">
+          <h3 class="font-headline font-extrabold text-sm md:text-4xl text-white uppercase tracking-tighter mb-1 md:mb-4 italic">🍟 Papas Fritas</h3>
+          <p class="font-body text-gray-400 text-xs leading-snug hidden md:block text-lg md:leading-relaxed">Papas fritas clásicas, delgadas y crujientes, en porciones de 50 gramos en bolsas papel mantequilla. Combínalas con Ketchup, Mayonesa y Mostaza.</p>
+          <p class="font-body text-gray-400 text-xs leading-snug md:hidden">50g por porción · Ketchup, mayo y mostaza</p>
         </div>
       </div>
 
       <!-- Nuggets -->
-      <div class="group relative overflow-hidden rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col md:flex-row h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
-        <div class="md:w-1/2 h-[300px] md:h-auto overflow-hidden order-first md:order-last">
+      <div class="group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
+        <div class="h-[140px] md:h-[260px] overflow-hidden">
           <img alt="Nuggets" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF05Q7Wll2cFXsRS--xW7dEis3QA_PYLLhGJn1HdY5H8pB6kGGcLo_upDCB2rcO5Sxw_cMebXi9v0Tvof9EbsBNpROxQqf8hFGwYBuT70hj-HvsBL9xK6Rue1lRP9qfM_69od91nWNFCXeuS8BLIug6IbwbBXu7m8ASlyzm2YfoKQYm1Tsik1Fi5nMPN3wtZstNqJ_sDn_BpIsFiVb08XsgvP2wNNxpLjq1PMh9ojLaiszyk6d33WNz_5K59YnNMqYvsMN4jGV7uE">
         </div>
-        <div class="md:w-1/2 p-10 flex flex-col justify-center">
-          <h3 class="font-headline font-extrabold text-4xl text-white uppercase tracking-tighter mb-4 italic">🍗 Nuggets</h3>
-          <p class="font-body text-gray-400 text-lg leading-relaxed">Nuggets de pollo ultra crocantes, servidos en porciones de 6 nuggets por porción en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
+        <div class="p-3 md:p-10 flex flex-col justify-center">
+          <h3 class="font-headline font-extrabold text-sm md:text-4xl text-white uppercase tracking-tighter mb-1 md:mb-4 italic">🍗 Nuggets</h3>
+          <p class="font-body text-gray-400 text-xs leading-snug hidden md:block text-lg md:leading-relaxed">Nuggets de pollo ultra crocantes, servidos en porciones de 6 nuggets por porción en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
+          <p class="font-body text-gray-400 text-xs leading-snug md:hidden">6 nuggets por porción · Ketchup, mayo y mostaza</p>
         </div>
       </div>
 
       <!-- Aros de Cebolla -->
-      <div class="group relative overflow-hidden rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col md:flex-row h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
-        <div class="md:w-1/2 h-[300px] md:h-auto overflow-hidden">
+      <div class="group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
+        <div class="h-[140px] md:h-[260px] overflow-hidden">
           <img alt="Aros de Cebolla" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr3DbjOqrPfPDYyPWS2aShNuzpmgF2Nn9oUgiHSooZS8JcuVHKTpAnaJa-Q2L54YOZyG0eCzDMnipVHZqcyKhoitIKAg2fUuKYKode1izvsZjtvi67upmZ73t1fU4pKiB6bW0-y7ltX3jyAi_NiJ5Mx7MJWUbwIIycFyThoWazEcMNUL-kmJ62UBx7GCfoipBDnboM6yIIRlAF4JtMSQZrdo57wXRVZo-XnWybD8cxGUjTErT4rATpHo3EKx7yavPh-P_oyirdtlo">
         </div>
-        <div class="md:w-1/2 p-10 flex flex-col justify-center">
-          <h3 class="font-headline font-extrabold text-4xl text-white uppercase tracking-tighter mb-4 italic">🧅 Aros de Cebolla</h3>
-          <p class="font-body text-gray-400 text-lg leading-relaxed">Nuestros Aros de Cebolla son la mezcla perfecta entre un dulce natural suave y el clásico sabor caramelizado. Servidos en porciones de 7 aros en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
+        <div class="p-3 md:p-10 flex flex-col justify-center">
+          <h3 class="font-headline font-extrabold text-sm md:text-4xl text-white uppercase tracking-tighter mb-1 md:mb-4 italic">🧅 Aros de Cebolla</h3>
+          <p class="font-body text-gray-400 text-xs leading-snug hidden md:block text-lg md:leading-relaxed">Nuestros Aros de Cebolla son la mezcla perfecta entre un dulce natural suave y el clásico sabor caramelizado. Servidos en porciones de 7 aros en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
+          <p class="font-body text-gray-400 text-xs leading-snug md:hidden">7 aros por porción · Ketchup, mayo y mostaza</p>
         </div>
       </div>
 
       <!-- Churros -->
-      <div class="group relative overflow-hidden rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col md:flex-row h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
-        <div class="md:w-1/2 h-[300px] md:h-auto overflow-hidden order-first md:order-last">
+      <div class="group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
+        <div class="h-[140px] md:h-[260px] overflow-hidden">
           <img alt="Churros" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCir6qgM90tIkMe0rLX6qs9M-wI6LvB6zvcVctqwOPVMYhjDEAVUtPL4JUth6xlP7rHAcd2hG07J3bPMgTQN3jAfQ2brlMBn-ud134zGVI6OcLlCsuTcfmTj5aJfHrV_7Z8jLa6jrKL73KSMmZLxS6aTtXCBD-RYsz1A_A0M6rgEeQ9unDSrHttR-8EyrEso26E-YzzkeGmXhC0PBXbkYMhJzQmY6yftK_kLyK9DdEVjvwZ7YR7Ovg4R9dZrp6NqVU-LyFTcFWyGso">
         </div>
-        <div class="md:w-1/2 p-10 flex flex-col justify-center">
-          <h3 class="font-headline font-extrabold text-4xl text-white uppercase tracking-tighter mb-4 italic">🥖 Churros</h3>
-          <p class="font-body text-gray-400 text-lg leading-relaxed">La guinda del postre: churros crujientes y calientes para cerrar tu celebración con algo dulce. Servidos en porciones de 4 churros en platos de cartón ecológicos y reciclables, acompañados con azúcar flor.</p>
+        <div class="p-3 md:p-10 flex flex-col justify-center">
+          <h3 class="font-headline font-extrabold text-sm md:text-4xl text-white uppercase tracking-tighter mb-1 md:mb-4 italic">🥖 Churros</h3>
+          <p class="font-body text-gray-400 text-xs leading-snug hidden md:block text-lg md:leading-relaxed">La guinda del postre: churros crujientes y calientes para cerrar tu celebración con algo dulce. Servidos en porciones de 4 churros en platos de cartón ecológicos y reciclables, acompañados con azúcar flor.</p>
+          <p class="font-body text-gray-400 text-xs leading-snug md:hidden">4 churros por porción · Azúcar flor incluida</p>
         </div>
       </div>
 
     </div><!-- /grid -->
 
     <!-- ── COTIZA FORM ────────────────────── -->
-    <div id="cotiza" class="mt-32 bg-[#242424] border border-white/10 rounded-[3rem] p-8 md:p-20 max-w-5xl mx-auto shadow-2xl relative overflow-hidden">
+    <div id="cotiza" class="mt-8 md:mt-32 bg-[#242424] border border-white/10 rounded-[1.5rem] md:rounded-[3rem] px-2 py-6 md:p-20 max-w-7xl mx-auto shadow-2xl relative overflow-hidden">
       <div class="absolute top-0 right-0 w-64 h-64 bg-[#ffcf00] rounded-full blur-[120px] opacity-10 translate-x-1/2 -translate-y-1/2"></div>
 
       <div class="relative z-10 text-center mb-12">
-        <h3 class="font-headline font-extrabold text-5xl text-white uppercase tracking-tighter mb-4">Lleva el sabor a tu evento</h3>
+        <h3 class="font-headline font-extrabold text-3xl md:text-5xl text-white uppercase tracking-tighter mb-4">Lleva el sabor a tu evento</h3>
         <p class="font-body text-gray-400 text-xl max-w-2xl mx-auto">Completa el formulario y recibe tu cotización personalizada en menos de 24 horas.</p>
       </div>
 
       <div class="w-full rounded-3xl overflow-hidden bg-[#121212]/50">
         <iframe
           src="https://docs.google.com/forms/d/1PjndDl_gVojhEESdZF3yAFHCcoyL2FYafnKiMQk_tUY/viewform?embedded=true"
-          width="100%" height="680" frameborder="0" marginheight="0" marginwidth="0"
-          style="border-radius:1.5rem; display:block;">Cargando…</iframe>
+          width="100%" height="820" frameborder="0" marginheight="0" marginwidth="0"
+          style="border-radius:1.5rem; display:block; min-height:600px;">Cargando…</iframe>
       </div>
     </div>
 
@@ -239,13 +243,13 @@
 </section>
 
 <!-- ── NOSOTROS ───────────────────────────────── -->
-<section id="nosotros" class="bg-[#121212] py-24 px-6 md:px-12">
+<section id="nosotros" class="bg-[#121212] py-10 md:py-24 px-4 md:px-12">
   <div class="max-w-screen-2xl mx-auto w-full">
-    <div class="flex flex-col lg:flex-row gap-16 items-start">
+    <div class="flex flex-col lg:flex-row gap-8 md:gap-16 items-start">
 
       <!-- Text column -->
       <div class="lg:w-1/3 lg:sticky top-32">
-        <h2 class="font-headline font-extrabold text-5xl md:text-7xl text-white uppercase tracking-tighter mb-6 leading-[0.9]">
+        <h2 class="font-headline font-extrabold text-3xl sm:text-4xl md:text-7xl text-white uppercase tracking-tighter mb-6 leading-[0.95] md:leading-[0.9]">
           Sobre Nosotros &amp; eventos<br><span class="text-[#ffcf00]">Papalones</span>
         </h2>
         <p class="font-body text-gray-400 text-lg mb-4 leading-relaxed">
@@ -265,7 +269,7 @@
       </div>
 
       <!-- Photo grid -->
-      <div class="lg:w-2/3 columns-1 md:columns-2 gap-6 space-y-6">
+      <div class="lg:w-2/3 columns-2 gap-3 md:gap-6 space-y-3 md:space-y-6">
         <div class="break-inside-avoid rounded-3xl overflow-hidden group border border-white/5 shadow-2xl">
           <img alt="Evento PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOQLlxt_WYd0p-GqAmP1NHmyKuAhlMaIUvoN-DSuSLlhXzCJi_7jGyzy0tCqULk-lJLXpycqFQyqCakUm0PV07N1eZvKKenKvBlt6NWfBJs8cpY9XtYO6IE3Cml7oU55pvTsv2N0PaZL98A468USmHfo0FBUH1UY-pcPbyic9L9RtT6nauMzGx9CpD5LX2acJQUoa8QM3snAwNvLfvbu9-bhnv1xv3kJJR340mKL26wcGZxwe41o-Bbp0G7l9A0Yb7IE4Nwi0Zp5EkRg">
@@ -305,14 +309,14 @@
 </section>
 
 <!-- ── CONTACTO ───────────────────────────────── -->
-<section id="contacto" class="bg-[#0a0a0a] pt-32 pb-12 px-6 md:px-12 relative overflow-hidden">
+<section id="contacto" class="bg-[#0a0a0a] pt-10 md:pt-32 pb-12 px-4 md:px-12 relative overflow-hidden">
   <!-- Glow -->
   <div class="absolute inset-0 pointer-events-none opacity-20">
     <div class="absolute w-[600px] h-[600px] bg-[#ffcf00] rounded-full blur-[150px] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></div>
   </div>
 
-  <div class="max-w-screen-xl mx-auto w-full text-center relative z-10 mb-24">
-    <h2 class="font-headline font-extrabold text-6xl md:text-8xl text-white uppercase tracking-tighter mb-8 leading-[0.85]">
+  <div class="max-w-screen-xl mx-auto w-full text-center relative z-10 mb-10 md:mb-24">
+    <h2 class="font-headline font-extrabold text-4xl sm:text-5xl md:text-8xl text-white uppercase tracking-tighter mb-8 leading-[0.9] md:leading-[0.85]">
       ¿Dudas?<br><span class="text-[#ffcf00]">¡Hablemos!</span>
     </h2>
 
