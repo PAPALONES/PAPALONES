@@ -5,37 +5,62 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <title>PAPALONES | Carrito de Papas Fritas para Eventos y Cumpleaños en Santiago</title>
 <meta name="description" content="Carrito de papas fritas, nuggets y más para cumpleaños, matrimonios y eventos en Santiago. Llegamos con todo el equipamiento a toda la RM. ¡Cotiza en 24 horas!">
+<meta name="keywords" content="catering cumpleaños santiago, papas fritas eventos, carrito papas fritas santiago, nuggets eventos, aros cebolla cumpleaños, churros eventos santiago, catering fiestas rm, carrito comida rápida santiago">
+<meta property="og:type"        content="website">
+<meta property="og:title"       content="PAPALONES | Carrito de Papas Fritas para Eventos en Santiago">
+<meta property="og:description" content="Llevamos papas fritas, nuggets y más a tu cumpleaños o evento. Cotiza en 24 horas. Toda la RM.">
+<meta property="og:url"         content="https://papalones.cl">
+<meta property="og:image"       content="https://papalones.cl/og-image.jpg">
+<meta property="og:locale"      content="es_CL">
+<meta name="twitter:card"       content="summary_large_image">
+<meta name="robots"             content="index, follow">
+<link rel="canonical"           href="https://papalones.cl">
+<link rel="preload" as="image" href="https://lh3.googleusercontent.com/aida-public/AB6AXuDlzKRghC3pKq5fUutgUc96MGAzinfgq9c_JdaBBFsMlzZ54ivzcgwIswblCY5RHJMivWUwGJtOlTZ_dTow2fexiJx0-hfMRk9fjlWyY8b9JycTJx5LBRr6gTuX4AZ6s37xeIm8LhTGy6CHV0TxwitZpS2Rn5xXXaQ6C-A22e2AvAFTxxNPsqbGezl5xi0ASVdxBI5aUEFJ8p3tOuhNIv-p5tg2_z_wc_VviAiYtDtzV3gsxWdDQzlE0n0HIlYIj99gWwngkrbPlQIohA">
 
-<!-- Fonts -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "PAPALONES",
+  "description": "Carrito de papas fritas, nuggets, aros de cebolla y churros para eventos, cumpleaños y matrimonios en Santiago.",
+  "url": "https://papalones.cl",
+  "telephone": "+56986087712",
+  "areaServed": "Región Metropolitana, Chile",
+  "servesCuisine": ["Fast Food", "Comida para eventos"],
+  "priceRange": "$$",
+  "sameAs": ["https://instagram.com/papa_lones"],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+56986087712",
+    "contactType": "reservations",
+    "availableLanguage": "Spanish"
+  }
+}
+</script>
+
 <link href="https://fonts.googleapis.com" rel="preconnect">
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
 <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Epilogue:ital,wght@0,400;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
-<!-- Tailwind -->
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<script>
   tailwind.config = {
     darkMode: "class",
     theme: {
       extend: {
         colors: {
-          "primary": "#6f5900",
-          "primary-container": "#ffcf07",
-          "primary-fixed-dim": "#efc200",
-          "on-primary-fixed": "#433500",
-          "inverse-surface": "#0c0f0f",
-          "surface": "#f6f6f6",
-          "surface-container-low": "#f0f1f1",
-          "surface-container-highest": "#dbdddd",
-          "on-surface": "#2d2f2f",
-          "outline-variant": "#acadad",
+          "gold": "#ffcf00",
+          "gold-dim": "#efc200",
+          "ink": "#0e0e0e",
+          "ink-2": "#161616",
+          "ink-3": "#1e1e1e",
+          "ink-4": "#272727",
         },
         fontFamily: {
           "headline": ["Epilogue"],
           "display":  ["Epilogue"],
           "body":     ["Be Vietnam Pro"],
-          "label":    ["Be Vietnam Pro"],
         },
       },
     },
@@ -43,260 +68,518 @@
 </script>
 
 <style>
+  :root {
+    --gold: #ffcf00;
+    --ink: #0e0e0e;
+  }
+
+  * { box-sizing: border-box; }
+
   .material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
   }
+
   html { scroll-behavior: smooth; }
 
-  /* Mobile menu transition */
-  #mobile-menu {
-    transition: max-height 0.35s ease, opacity 0.3s ease;
-    max-height: 0;
-    opacity: 0;
-    overflow: hidden;
-  }
-  #mobile-menu.open {
-    max-height: 400px;
-    opacity: 1;
+  /* Grain overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: .025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px;
   }
 
-  /* Nav link active indicator */
-  .nav-link.active {
-    color: white;
-    border-bottom: 2px solid #ffcf07;
+  /* Mobile menu */
+  #mobile-menu {
+    transition: max-height .35s ease, opacity .3s ease;
+    max-height: 0; opacity: 0; overflow: hidden;
+  }
+  #mobile-menu.open { max-height: 420px; opacity: 1; }
+
+  /* Scroll reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+  .reveal-d1 { transition-delay: .1s; }
+  .reveal-d2 { transition-delay: .2s; }
+  .reveal-d3 { transition-delay: .3s; }
+  .reveal-d4 { transition-delay: .4s; }
+
+  /* Marquee */
+  @keyframes marquee { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+  .marquee-track { animation: marquee 22s linear infinite; display: flex; width: max-content; }
+  .marquee-track:hover { animation-play-state: paused; }
+
+  /* Gold shimmer on CTA */
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+  }
+  .cta-shimmer {
+    background: linear-gradient(105deg, #ffcf00 40%, #fff7a0 50%, #ffcf00 60%);
+    background-size: 200% auto;
+    animation: shimmer 3s linear infinite;
+  }
+
+  /* Mobile sticky bar */
+  #sticky-bar { display: none; }
+  @media (max-width: 767px) {
+    #sticky-bar { display: flex; }
+    body { padding-bottom: 72px; }
+  }
+
+  /* Nav active */
+  .nav-link-active {
+    color: white !important;
+    border-bottom: 2px solid var(--gold);
+  }
+
+  /* Card glow on hover */
+  .menu-card:hover {
+    box-shadow: 0 0 0 1px rgba(255,207,0,.25), 0 20px 60px rgba(0,0,0,.5);
+  }
+
+  /* Testimonial quote mark */
+  .quote::before {
+    content: '"';
+    font-family: 'Epilogue', serif;
+    font-size: 5rem;
+    line-height: 0;
+    color: var(--gold);
+    opacity: .25;
+    position: absolute;
+    top: 2rem;
+    left: 1.5rem;
+  }
+
+  /* Number badge on menu cards */
+  .menu-num {
+    font-family: 'Epilogue', serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: clamp(3rem, 8vw, 5rem);
+    color: rgba(255,207,0,.08);
+    line-height: 1;
+    user-select: none;
+    position: absolute;
+    bottom: .5rem;
+    right: 1rem;
   }
 </style>
 </head>
 
-<body class="bg-[#121212] text-white font-body antialiased selection:bg-[#ffcf00] selection:text-black dark">
+<body class="bg-[#0e0e0e] text-white font-body antialiased selection:bg-[#ffcf00] selection:text-black dark">
 
-<!-- ── NAVBAR ─────────────────────────────────── -->
-<nav id="navbar" class="fixed top-0 w-full z-50 bg-[#121212]/90 backdrop-blur-xl shadow-[0_8px_30px_rgb(0,0,0,0.4)]">
-  <div class="flex justify-between items-center w-full px-4 md:px-8 py-4 md:py-5 max-w-screen-2xl mx-auto">
+<!-- ── NAVBAR ─────────────────────────────────────────── -->
+<nav id="navbar" class="fixed top-0 w-full z-50 bg-[#0e0e0e]/90 backdrop-blur-xl border-b border-white/5">
+  <div class="flex justify-between items-center w-full px-5 md:px-10 py-4 md:py-5 max-w-screen-2xl mx-auto">
 
-    <!-- Logo -->
-    <a href="#inicio" class="text-3xl font-extrabold italic tracking-tighter text-white font-headline uppercase">
+    <a href="#inicio" class="text-2xl md:text-3xl font-extrabold italic tracking-tighter text-white font-headline uppercase">
       PAPALONES
     </a>
 
-    <!-- Desktop links -->
     <div class="hidden md:flex space-x-8 items-center">
-      <a href="#inicio"    class="nav-link text-white border-b-2 border-[#ffcf00] pb-1 font-headline font-extrabold uppercase tracking-tighter hover:text-[#ffcf00] transition-colors duration-200">Inicio</a>
-      <a href="#menu"      class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter hover:text-white transition-colors duration-200">Menú</a>
-      <a href="#nosotros"  class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter hover:text-white transition-colors duration-200">Nosotros</a>
-      <a href="#contacto"  class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter hover:text-white transition-colors duration-200">Contacto</a>
+      <a href="#inicio"   class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors duration-200">Inicio</a>
+      <a href="#menu"     class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors duration-200">Menú</a>
+      <a href="#galeria"  class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors duration-200">Galería</a>
+      <a href="#nosotros" class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors duration-200">Nosotros</a>
     </div>
 
-    <!-- CTA button -->
-    <a href="#cotiza" class="hidden md:block bg-[#ffcf00] text-black px-6 py-3 rounded-full font-headline font-extrabold uppercase tracking-tight hover:bg-yellow-400 hover:-translate-y-0.5 transition-all duration-300">
-      Reservar Evento
+    <a href="#cotiza" class="hidden md:block cta-shimmer text-black px-6 py-3 rounded-full font-headline font-extrabold uppercase tracking-tight text-sm hover:-translate-y-0.5 transition-transform duration-300 shadow-[0_6px_30px_rgba(255,207,0,0.35)]">
+      Cotiza tu evento
     </a>
 
-    <!-- Hamburger -->
     <button id="menu-btn" class="md:hidden text-[#ffcf00] focus:outline-none" aria-label="Abrir menú">
       <span id="menu-icon" class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1">menu</span>
     </button>
   </div>
 
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="md:hidden bg-[#1a1a1a] px-8">
-    <div class="flex flex-col gap-1 py-4">
-      <a href="#inicio"   class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-xl py-3 text-white border-b border-white/10 hover:text-[#ffcf00] transition-colors">Inicio</a>
-      <a href="#menu"     class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-xl py-3 text-gray-300 border-b border-white/10 hover:text-[#ffcf00] transition-colors">Menú</a>
-      <a href="#nosotros" class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-xl py-3 text-gray-300 border-b border-white/10 hover:text-[#ffcf00] transition-colors">Nosotros</a>
-      <a href="#contacto" class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-xl py-3 text-gray-300 border-b border-white/10 hover:text-[#ffcf00] transition-colors">Contacto</a>
-      <a href="#cotiza"   class="mobile-link mt-4 bg-[#ffcf00] text-black rounded-full px-6 py-3 font-headline font-extrabold uppercase tracking-tight text-center hover:bg-yellow-400 transition-colors">Reservar Evento</a>
+  <div id="mobile-menu" class="md:hidden bg-[#161616] border-t border-white/5 px-6">
+    <div class="flex flex-col gap-0 py-3">
+      <a href="#inicio"   class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-white border-b border-white/8 hover:text-[#ffcf00] transition-colors">Inicio</a>
+      <a href="#menu"     class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Menú</a>
+      <a href="#galeria"  class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Galería</a>
+      <a href="#nosotros" class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Nosotros</a>
+      <a href="#contacto" class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 hover:text-[#ffcf00] transition-colors">Contacto</a>
     </div>
   </div>
 </nav>
 
 <main>
 
-<!-- ── HERO ───────────────────────────────────── -->
-<section id="inicio" class="relative bg-[#121212] min-h-screen flex items-center pt-28 pb-10 md:pb-24 px-6 md:px-12 overflow-hidden">
-  <!-- Glow background -->
-  <div class="absolute inset-0 opacity-10 pointer-events-none">
-    <div class="absolute w-[800px] h-[800px] bg-[#ffcf00] rounded-full blur-[120px] -top-[400px] left-1/2 -translate-x-1/2"></div>
+<!-- ── HERO ───────────────────────────────────────────── -->
+<section id="inicio" class="relative bg-[#0e0e0e] min-h-[100svh] flex items-center pt-24 pb-8 md:pt-32 md:pb-24 px-5 md:px-12 overflow-hidden">
+  <!-- Radial glow -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden">
+    <div class="absolute w-[600px] h-[600px] bg-[#ffcf00] rounded-full blur-[140px] opacity-[.07] -top-[300px] left-1/2 -translate-x-1/2"></div>
+    <div class="absolute w-[400px] h-[400px] bg-[#ffcf00] rounded-full blur-[100px] opacity-[.04] bottom-0 right-0 translate-x-1/3 translate-y-1/3"></div>
   </div>
 
-  <div class="max-w-screen-xl mx-auto w-full flex flex-col items-center gap-6 md:gap-12 relative z-10">
-    <!-- Logo image -->
-    <img
-      alt="PAPALONES Logo"
-      class="h-24 md:h-32 object-contain brightness-125 contrast-110"
-      style="filter: drop-shadow(rgba(255,207,0,0.4) 0px 0px 15px)"
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX-skN6idND_CtisOs9FxXmyT3d6CRDOzIeKHbxQil1ksffQh3nxOPzNTFyalHsifvdC6GlkSWVVO5CdhvNvpEIo-Hoq11v3HTLMRw7D5QT5g9e5rxUEepcENp0zAyTHbmYFrOQDuXwyuYIHgwE-mm4Ts7nAMtbJomeam3TpP8ZZiXNN_Iq74c4aImB9VSwVkOmwicpovT9zRj4KI9XpEigsdCJg28qEsaaDx2_aZ9N9k7aXG1iEueXvOGC600wsiFEl4-ABLInKO_fA">
+  <div class="max-w-screen-xl mx-auto w-full flex flex-col items-center gap-5 md:gap-10 relative z-10">
 
-    <!-- Headline -->
-    <h1 class="font-headline font-extrabold text-4xl sm:text-5xl md:text-8xl lg:text-9xl text-[#ffcf00] uppercase tracking-tighter leading-[0.95] md:leading-[0.9] text-center max-w-5xl">
-      Carrito de Papas Fritas para Cumpleaños y Eventos en Santiago
+    <!-- Trust pill -->
+    <div class="reveal flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm font-body font-semibold text-gray-300">
+      <span class="text-[#ffcf00]">★</span>
+      <span>+500 eventos realizados en Santiago</span>
+    </div>
+
+    <!-- Headline — short on mobile so CTA stays above fold -->
+    <h1 class="reveal reveal-d1 font-headline font-extrabold text-[2.6rem] leading-[1] sm:text-5xl md:text-8xl lg:text-9xl text-[#ffcf00] uppercase tracking-tighter text-center max-w-5xl md:leading-[0.9]">
+      El carrito de papas fritas para tu cumpleaños
     </h1>
 
-    <p class="font-body text-gray-300 text-xl md:text-2xl max-w-2xl text-center leading-relaxed font-medium">
-      Llevamos el sabor de nuestro carrito directamente a tu celebración.
+    <p class="reveal reveal-d2 font-body text-gray-400 text-base md:text-xl max-w-xl text-center leading-relaxed font-medium">
+      Llevamos el sabor de nuestro carrito directamente a tu celebración.<br class="hidden md:block">
+      Toda la Región Metropolitana.
     </p>
 
-    <a href="#cotiza" class="mt-4 bg-[#ffcf00] text-black rounded-full px-12 py-5 font-headline font-extrabold uppercase tracking-widest text-lg hover:bg-yellow-400 hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_40px_rgba(255,207,0,0.3)]">
-      Cotiza tu evento aquí
-    </a>
+    <!-- CTA — visible above fold on 390px -->
+    <div class="reveal reveal-d3 flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center">
+      <a href="#cotiza" class="cta-shimmer w-full sm:w-auto text-black rounded-full px-10 py-4 font-headline font-extrabold uppercase tracking-widest text-base text-center hover:-translate-y-1 transition-transform duration-300 shadow-[0_10px_40px_rgba(255,207,0,0.3)]">
+        Cotiza tu evento
+      </a>
+      <a href="https://wa.me/message/Q3ZFMO4HQQMAL1" target="_blank" rel="noopener"
+        class="w-full sm:w-auto flex items-center justify-center gap-2 border border-white/20 text-white rounded-full px-8 py-4 font-headline font-extrabold uppercase tracking-wider text-base hover:border-[#ffcf00]/50 hover:text-[#ffcf00] transition-all duration-300">
+        <svg viewBox="0 0 32 32" width="18" height="18" fill="currentColor"><path d="M16 .5C7.44.5.5 7.44.5 16c0 2.84.74 5.51 2.04 7.83L.5 31.5l7.87-2.06A15.45 15.45 0 0016 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.27a12.7 12.7 0 01-6.47-1.77l-.46-.27-4.67 1.22 1.25-4.56-.3-.47A12.72 12.72 0 1116 28.77zm6.98-9.54c-.38-.19-2.26-1.12-2.61-1.24-.35-.13-.6-.19-.86.19-.25.38-.98 1.24-1.2 1.5-.22.25-.44.28-.82.09-.38-.19-1.61-.59-3.07-1.89-1.13-1-1.9-2.24-2.12-2.62-.22-.38-.02-.59.17-.77.17-.17.38-.44.57-.66.19-.22.25-.38.38-.63.13-.25.06-.47-.03-.66-.1-.19-.87-2.09-1.19-2.86-.31-.75-.63-.65-.86-.66l-.73-.01c-.25 0-.66.09-1.01.47-.35.38-1.32 1.29-1.32 3.14s1.35 3.64 1.54 3.89c.19.25 2.66 4.06 6.44 5.69.9.39 1.6.62 2.15.79.9.28 1.73.24 2.38.15.73-.11 2.26-.92 2.58-1.81.32-.89.32-1.65.22-1.81-.09-.16-.35-.25-.73-.44z"/></svg>
+        WhatsApp
+      </a>
+    </div>
 
     <!-- Hero image -->
-    <div class="relative w-full max-w-4xl mt-2 md:mt-8">
-      <div class="absolute inset-0 bg-gradient-to-tr from-[#ffcf00]/20 to-transparent rounded-3xl opacity-50 blur-2xl -z-10 translate-x-4 translate-y-4"></div>
+    <div class="reveal reveal-d4 relative w-full max-w-4xl mt-2 md:mt-4">
+      <div class="absolute inset-0 bg-[#ffcf00]/15 rounded-3xl blur-3xl -z-10 scale-95"></div>
       <img
-        alt="Comida PAPALONES"
-        class="w-full h-[400px] md:h-[600px] object-cover rounded-3xl shadow-2xl border border-white/10"
-        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlzKRghC3pKq5fUutgUc96MGAzinfgq9c_JdaBBFsMlzZ54ivzcgwIswblCY5RHJMivWUwGJtOlTZ_dTow2fexiJx0-hfMRk9fjlWyY8b9JycTJx5LBRr6gTuX4AZ6s37xeIm8LhTGy6CHV0TxwitZpS2Rn5xXXaQ6C-A22e2AvAFTxxNPsqbGezl5xi0ASVdxBI5aUEFJ8p3tOuhNIv-p5tg2_z_wc_VviAiYtDtzV3gsxWdDQzlE0n0HIlYIj99gWwngkrbPlQIohA">
+        alt="Papas fritas PAPALONES en evento de cumpleaños en Santiago"
+        class="w-full h-[260px] sm:h-[380px] md:h-[580px] object-cover rounded-2xl md:rounded-3xl shadow-2xl border border-white/8"
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlzKRghC3pKq5fUutgUc96MGAzinfgq9c_JdaBBFsMlzZ54ivzcgwIswblCY5RHJMivWUwGJtOlTZ_dTow2fexiJx0-hfMRk9fjlWyY8b9JycTJx5LBRr6gTuX4AZ6s37xeIm8LhTGy6CHV0TxwitZpS2Rn5xXXaQ6C-A22e2AvAFTxxNPsqbGezl5xi0ASVdxBI5aUEFJ8p3tOuhNIv-p5tg2_z_wc_VviAiYtDtzV3gsxWdDQzlE0n0HIlYIj99gWwngkrbPlQIohA"
+        loading="eager" fetchpriority="high" decoding="async">
     </div>
   </div>
 </section>
 
-<!-- ── MENÚ ────────────────────────────────────── -->
-<section id="menu" class="pt-10 md:pt-32 pb-10 md:pb-24 px-2 md:px-12 relative bg-gradient-to-b from-[#121212] via-[#1a1a1a] to-[#121212]">
+<!-- ── MENÚ ────────────────────────────────────────────── -->
+<section id="menu" class="pt-16 md:pt-32 pb-16 md:pb-24 px-4 md:px-12 bg-[#0e0e0e]">
   <div class="max-w-screen-2xl mx-auto w-full">
 
-    <!-- Section header -->
-    <div class="flex flex-col md:flex-row justify-between items-end mb-8 md:mb-20 gap-3 md:gap-6">
-      <h2 class="font-headline font-extrabold text-4xl sm:text-5xl md:text-8xl text-white uppercase tracking-tighter w-full md:w-2/3 leading-[0.9] md:leading-[0.85]">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-20 gap-3">
+      <h2 class="reveal font-headline font-extrabold text-4xl sm:text-5xl md:text-8xl text-white uppercase tracking-tighter w-full md:w-2/3 leading-[0.92]">
         Nuestro menú<br><span class="text-[#ffcf00] italic">&amp; cotizaciones</span>
       </h2>
-      <p class="font-body text-gray-400 text-xl w-full md:w-1/3 text-left md:text-right font-medium italic">
-        Sabor único, calidad premium.<br>Llegamos a toda la RM.
+      <p class="reveal reveal-d1 font-body text-gray-500 text-base md:text-lg w-full md:w-1/3 text-left md:text-right italic leading-relaxed">
+        Sabor único, Calidad premium.<br>Llegamos a toda la RM con todo nuestro equipamiento
       </p>
     </div>
 
-    <!-- Products grid -->
-    <div class="grid grid-cols-2 gap-3 md:gap-8 lg:gap-12">
+    <div class="grid grid-cols-2 gap-3 md:gap-6 lg:gap-10">
 
       <!-- Papas Fritas -->
-      <div class="group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
-        <div class="h-[140px] md:h-[260px] overflow-hidden">
-          <img alt="Papas Fritas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            src="papas.jpg">
+      <div class="reveal menu-card group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-[#161616] border border-white/8 flex flex-col transition-all duration-500 cursor-default">
+        <div class="h-[130px] md:h-[260px] overflow-hidden">
+          <picture>
+            <source srcset="papas.webp" type="image/webp">
+            <img alt="Papas Fritas PAPALONES" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              src="papas.jpg" loading="lazy" decoding="async">
+          </picture>
         </div>
-        <div class="p-3 md:p-10 flex flex-col justify-center">
-          <h3 class="font-headline font-extrabold text-sm md:text-4xl text-white uppercase tracking-tighter mb-1 md:mb-4 italic">🍟 Papas Fritas</h3>
-          <p class="font-body text-gray-400 text-xs md:text-lg leading-snug md:leading-relaxed">Papas fritas clásicas, delgadas y crujientes, en porciones de 50 gramos en bolsas papel mantequilla. Combínalas con Ketchup, Mayonesa y Mostaza.</p>
+        <div class="p-3 md:p-8 flex flex-col justify-center relative">
+          <span class="menu-num">01</span>
+          <h3 class="font-headline font-extrabold text-xs md:text-3xl text-white uppercase tracking-tighter mb-1 md:mb-3 italic">Papas Fritas</h3>
+          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Papas fritas clásicas, delgadas y crujientes, en porciones de 50 gramos en bolsas papel mantequilla. Combínalas con Ketchup, Mayonesa y Mostaza.</p>
         </div>
       </div>
 
       <!-- Nuggets -->
-      <div class="group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
-        <div class="h-[140px] md:h-[260px] overflow-hidden">
-          <img alt="Nuggets" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF05Q7Wll2cFXsRS--xW7dEis3QA_PYLLhGJn1HdY5H8pB6kGGcLo_upDCB2rcO5Sxw_cMebXi9v0Tvof9EbsBNpROxQqf8hFGwYBuT70hj-HvsBL9xK6Rue1lRP9qfM_69od91nWNFCXeuS8BLIug6IbwbBXu7m8ASlyzm2YfoKQYm1Tsik1Fi5nMPN3wtZstNqJ_sDn_BpIsFiVb08XsgvP2wNNxpLjq1PMh9ojLaiszyk6d33WNz_5K59YnNMqYvsMN4jGV7uE">
+      <div class="reveal reveal-d1 menu-card group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-[#161616] border border-white/8 flex flex-col transition-all duration-500 cursor-default">
+        <div class="h-[130px] md:h-[260px] overflow-hidden">
+          <img alt="Nuggets PAPALONES" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF05Q7Wll2cFXsRS--xW7dEis3QA_PYLLhGJn1HdY5H8pB6kGGcLo_upDCB2rcO5Sxw_cMebXi9v0Tvof9EbsBNpROxQqf8hFGwYBuT70hj-HvsBL9xK6Rue1lRP9qfM_69od91nWNFCXeuS8BLIug6IbwbBXu7m8ASlyzm2YfoKQYm1Tsik1Fi5nMPN3wtZstNqJ_sDn_BpIsFiVb08XsgvP2wNNxpLjq1PMh9ojLaiszyk6d33WNz_5K59YnNMqYvsMN4jGV7uE"
+            loading="lazy" decoding="async">
         </div>
-        <div class="p-3 md:p-10 flex flex-col justify-center">
-          <h3 class="font-headline font-extrabold text-sm md:text-4xl text-white uppercase tracking-tighter mb-1 md:mb-4 italic">🍗 Nuggets</h3>
-          <p class="font-body text-gray-400 text-xs md:text-lg leading-snug md:leading-relaxed">Nuggets de pollo ultra crocantes, servidos en porciones de 6 nuggets por porción en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
+        <div class="p-3 md:p-8 flex flex-col justify-center relative">
+          <span class="menu-num">02</span>
+          <h3 class="font-headline font-extrabold text-xs md:text-3xl text-white uppercase tracking-tighter mb-1 md:mb-3 italic">Nuggets</h3>
+          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Nuggets de pollo ultra crocantes, servidos en porciones de 6 nuggets por porción en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
         </div>
       </div>
 
       <!-- Aros de Cebolla -->
-      <div class="group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
-        <div class="h-[140px] md:h-[260px] overflow-hidden">
-          <img alt="Aros de Cebolla" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr3DbjOqrPfPDYyPWS2aShNuzpmgF2Nn9oUgiHSooZS8JcuVHKTpAnaJa-Q2L54YOZyG0eCzDMnipVHZqcyKhoitIKAg2fUuKYKode1izvsZjtvi67upmZ73t1fU4pKiB6bW0-y7ltX3jyAi_NiJ5Mx7MJWUbwIIycFyThoWazEcMNUL-kmJ62UBx7GCfoipBDnboM6yIIRlAF4JtMSQZrdo57wXRVZo-XnWybD8cxGUjTErT4rATpHo3EKx7yavPh-P_oyirdtlo">
+      <div class="reveal reveal-d1 menu-card group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-[#161616] border border-white/8 flex flex-col transition-all duration-500 cursor-default">
+        <div class="h-[130px] md:h-[260px] overflow-hidden">
+          <img alt="Aros de Cebolla PAPALONES" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr3DbjOqrPfPDYyPWS2aShNuzpmgF2Nn9oUgiHSooZS8JcuVHKTpAnaJa-Q2L54YOZyG0eCzDMnipVHZqcyKhoitIKAg2fUuKYKode1izvsZjtvi67upmZ73t1fU4pKiB6bW0-y7ltX3jyAi_NiJ5Mx7MJWUbwIIycFyThoWazEcMNUL-kmJ62UBx7GCfoipBDnboM6yIIRlAF4JtMSQZrdo57wXRVZo-XnWybD8cxGUjTErT4rATpHo3EKx7yavPh-P_oyirdtlo"
+            loading="lazy" decoding="async">
         </div>
-        <div class="p-3 md:p-10 flex flex-col justify-center">
-          <h3 class="font-headline font-extrabold text-sm md:text-4xl text-white uppercase tracking-tighter mb-1 md:mb-4 italic">🧅 Aros de Cebolla</h3>
-          <p class="font-body text-gray-400 text-xs md:text-lg leading-snug md:leading-relaxed">Nuestros Aros de Cebolla son la mezcla perfecta entre un dulce natural suave y el clásico sabor caramelizado. Servidos en porciones de 7 aros en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
+        <div class="p-3 md:p-8 flex flex-col justify-center relative">
+          <span class="menu-num">03</span>
+          <h3 class="font-headline font-extrabold text-xs md:text-3xl text-white uppercase tracking-tighter mb-1 md:mb-3 italic">Aros de Cebolla</h3>
+          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Nuestros Aros de Cebolla son la mezcla perfecta entre un dulce natural suave y el clásico sabor caramelizado. Servidos en porciones de 7 aros en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
         </div>
       </div>
 
       <!-- Churros -->
-      <div class="group relative overflow-hidden rounded-2xl md:rounded-[2.5rem] bg-[#1c1c1c] border border-white/10 flex flex-col h-full hover:border-[#ffcf00]/30 transition-colors duration-300">
-        <div class="h-[140px] md:h-[260px] overflow-hidden">
-          <img alt="Churros" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCir6qgM90tIkMe0rLX6qs9M-wI6LvB6zvcVctqwOPVMYhjDEAVUtPL4JUth6xlP7rHAcd2hG07J3bPMgTQN3jAfQ2brlMBn-ud134zGVI6OcLlCsuTcfmTj5aJfHrV_7Z8jLa6jrKL73KSMmZLxS6aTtXCBD-RYsz1A_A0M6rgEeQ9unDSrHttR-8EyrEso26E-YzzkeGmXhC0PBXbkYMhJzQmY6yftK_kLyK9DdEVjvwZ7YR7Ovg4R9dZrp6NqVU-LyFTcFWyGso">
+      <div class="reveal reveal-d2 menu-card group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-[#161616] border border-white/8 flex flex-col transition-all duration-500 cursor-default">
+        <div class="h-[130px] md:h-[260px] overflow-hidden">
+          <img alt="Churros PAPALONES" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCir6qgM90tIkMe0rLX6qs9M-wI6LvB6zvcVctqwOPVMYhjDEAVUtPL4JUth6xlP7rHAcd2hG07J3bPMgTQN3jAfQ2brlMBn-ud134zGVI6OcLlCsuTcfmTj5aJfHrV_7Z8jLa6jrKL73KSMmZLxS6aTtXCBD-RYsz1A_A0M6rgEeQ9unDSrHttR-8EyrEso26E-YzzkeGmXhC0PBXbkYMhJzQmY6yftK_kLyK9DdEVjvwZ7YR7Ovg4R9dZrp6NqVU-LyFTcFWyGso"
+            loading="lazy" decoding="async">
         </div>
-        <div class="p-3 md:p-10 flex flex-col justify-center">
-          <h3 class="font-headline font-extrabold text-sm md:text-4xl text-white uppercase tracking-tighter mb-1 md:mb-4 italic">🥖 Churros</h3>
-          <p class="font-body text-gray-400 text-xs md:text-lg leading-snug md:leading-relaxed">La guinda del postre: churros crujientes y calientes para cerrar tu celebración con algo dulce. Servidos en porciones de 4 churros en platos de cartón ecológicos y reciclables, acompañados con azúcar flor.</p>
+        <div class="p-3 md:p-8 flex flex-col justify-center relative">
+          <span class="menu-num">04</span>
+          <h3 class="font-headline font-extrabold text-xs md:text-3xl text-white uppercase tracking-tighter mb-1 md:mb-3 italic">Churros</h3>
+          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">La guinda del postre: churros crujientes y calientes para cerrar tu celebración con algo dulce. Servidos en porciones de 4 churros en platos de cartón ecológicos y reciclables, acompañados con azúcar flor.</p>
         </div>
       </div>
 
-    </div><!-- /grid -->
+    </div>
+  </div>
+</section>
 
-    <!-- ── COTIZA FORM ────────────────────── -->
-    <div id="cotiza" class="mt-8 md:mt-32 bg-[#242424] border border-white/10 rounded-[1.5rem] md:rounded-[3rem] px-2 py-6 md:p-20 max-w-7xl mx-auto shadow-2xl relative overflow-hidden">
-      <div class="absolute top-0 right-0 w-64 h-64 bg-[#ffcf00] rounded-full blur-[120px] opacity-10 translate-x-1/2 -translate-y-1/2"></div>
+<!-- ── MARQUEE ─────────────────────────────────────────── -->
+<div class="overflow-hidden border-y border-white/5 bg-[#ffcf00] py-4 select-none">
+  <div class="marquee-track">
+    <span class="font-headline font-extrabold text-black uppercase tracking-tighter text-2xl md:text-3xl pr-12 italic">Cumpleaños</span>
+    <span class="font-headline font-extrabold text-black/30 uppercase tracking-tighter text-2xl md:text-3xl pr-12">✦</span>
+    <span class="font-headline font-extrabold text-black uppercase tracking-tighter text-2xl md:text-3xl pr-12 italic">Matrimonios</span>
+    <span class="font-headline font-extrabold text-black/30 uppercase tracking-tighter text-2xl md:text-3xl pr-12">✦</span>
+    <span class="font-headline font-extrabold text-black uppercase tracking-tighter text-2xl md:text-3xl pr-12 italic">Eventos Corporativos</span>
+    <span class="font-headline font-extrabold text-black/30 uppercase tracking-tighter text-2xl md:text-3xl pr-12">✦</span>
+    <span class="font-headline font-extrabold text-black uppercase tracking-tighter text-2xl md:text-3xl pr-12 italic">Fiestas de Fin de Año</span>
+    <span class="font-headline font-extrabold text-black/30 uppercase tracking-tighter text-2xl md:text-3xl pr-12">✦</span>
+    <!-- duplicate for seamless loop -->
+    <span class="font-headline font-extrabold text-black uppercase tracking-tighter text-2xl md:text-3xl pr-12 italic">Cumpleaños</span>
+    <span class="font-headline font-extrabold text-black/30 uppercase tracking-tighter text-2xl md:text-3xl pr-12">✦</span>
+    <span class="font-headline font-extrabold text-black uppercase tracking-tighter text-2xl md:text-3xl pr-12 italic">Matrimonios</span>
+    <span class="font-headline font-extrabold text-black/30 uppercase tracking-tighter text-2xl md:text-3xl pr-12">✦</span>
+    <span class="font-headline font-extrabold text-black uppercase tracking-tighter text-2xl md:text-3xl pr-12 italic">Eventos Corporativos</span>
+    <span class="font-headline font-extrabold text-black/30 uppercase tracking-tighter text-2xl md:text-3xl pr-12">✦</span>
+    <span class="font-headline font-extrabold text-black uppercase tracking-tighter text-2xl md:text-3xl pr-12 italic">Fiestas de Fin de Año</span>
+    <span class="font-headline font-extrabold text-black/30 uppercase tracking-tighter text-2xl md:text-3xl pr-12">✦</span>
+  </div>
+</div>
 
-      <div class="relative z-10 text-center mb-12">
-        <h3 class="font-headline font-extrabold text-3xl md:text-5xl text-white uppercase tracking-tighter mb-4">Lleva el sabor a tu evento</h3>
-        <p class="font-body text-gray-400 text-xl max-w-2xl mx-auto">Completa el formulario y recibe tu cotización personalizada en menos de 24 horas.</p>
+<!-- ── GALERÍA ─────────────────────────────────────────── -->
+<section id="galeria" class="pt-16 md:pt-32 pb-16 md:pb-24 px-4 md:px-12 bg-[#0e0e0e]">
+  <div class="max-w-screen-2xl mx-auto w-full">
+
+    <div class="flex flex-col md:flex-row justify-between items-end mb-10 md:mb-16 gap-3">
+      <h2 class="reveal font-headline font-extrabold text-4xl sm:text-5xl md:text-7xl text-white uppercase tracking-tighter leading-[0.92]">
+        Así celebramos<br><span class="text-[#ffcf00] italic">contigo</span>
+      </h2>
+      <a href="https://instagram.com/papa_lones" target="_blank" rel="noopener"
+        class="reveal reveal-d1 flex items-center gap-2 text-gray-400 hover:text-[#ffcf00] transition-colors font-body font-semibold text-sm uppercase tracking-widest">
+        <span>Ver más en Instagram</span>
+        <span class="material-symbols-outlined text-base">arrow_forward</span>
+      </a>
+    </div>
+
+    <!-- Masonry 2-col mobile, 3-col desktop -->
+    <div class="columns-2 md:columns-3 gap-3 md:gap-5 space-y-3 md:space-y-5">
+
+      <div class="reveal break-inside-avoid rounded-2xl overflow-hidden group">
+        <img alt="Evento PAPALONES Santiago" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-110" loading="lazy" decoding="async"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOQLlxt_WYd0p-GqAmP1NHmyKuAhlMaIUvoN-DSuSLlhXzCJi_7jGyzy0tCqULk-lJLXpycqFQyqCakUm0PV07N1eZvKKenKvBlt6NWfBJs8cpY9XtYO6IE3Cml7oU55pvTsv2N0PaZL98A468USmHfo0FBUH1UY-pcPbyic9L9RtT6nauMzGx9CpD5LX2acJQUoa8QM3snAwNvLfvbu9-bhnv1xv3kJJR340mKL26wcGZxwe41o-Bbp0G7l9A0Yb7IE4Nwi0Zp5EkRg">
       </div>
 
-      <div class="w-full rounded-3xl overflow-hidden bg-[#121212]/50">
+      <div class="reveal reveal-d1 break-inside-avoid rounded-2xl overflow-hidden group">
+        <img alt="Comida PAPALONES evento" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-110" loading="lazy" decoding="async"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6lVlzlals2dKfWeeqMaw8s2XxhvxTgOi_FyZOGspDKkauMleq9IHO0GdUXUZ4HTsnFrdPqCoJs5ht715Prn60Xs3VkMEGOuTsBSQfpxuR1JbE_bEfWuDzZoZ194rarzkmwuU0z3KhKvvMZbNNYky6gOB5BF7eEO3E4th-svMEk8_LC-9elqJl8VVxf3-WRJuIOHMHwihqbyTS2useNfMwRj1FOLH5NuSqyDk3UaEI2EVeXj9_Nu7c4qkFgUcBtR4XhknUjAcEX-KxEQ">
+      </div>
+
+      <div class="reveal reveal-d2 break-inside-avoid rounded-2xl overflow-hidden group">
+        <img alt="Carrito papas fritas cumpleaños Santiago" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-110" loading="lazy" decoding="async"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwc73A8WkcrFU7FThAaFWLwNxEb2SmEmqrEw8_xWYNFwJzliy7g0P6ZjQ77SYGXbGrLvziFFlRdlBexpUCmXP4RBOsEmxlsud4G3T65ljs4zDkHvaZ_FTbM8H7MqbZUTNOBsYyzlaS-dVIRJh6U4_qApylMThEJo-VixzZCBDRof-0d8QAy3GyPpQpMhxrgj_JTydiMT3uPqJE61dZXp2U-MzeF6MDL_fnKTm-ECrP1NLbEitgySHhg9pgcC-JHRx248kKqCeXE3zjrg">
+      </div>
+
+      <div class="reveal break-inside-avoid rounded-2xl overflow-hidden group">
+        <img alt="Papas fritas evento PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-110" loading="lazy" decoding="async"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEtgd_uXBt7bWvLT8sd3S4a2ScsXfSGQOCdSHUGrw_0mYmSd3FRQ0GQXlJau62SFdulqzEa6qFS3IfbfWEZdKPdzseTflZiL4uDr_yB20gsjuHNA0N9mBSbe3IimkVP5Gmxyd28gADyYtty6vSvzbErGQ331gs-GC0LV77xKo1MprGcmGaTdY2ha-k_WoQljSss6A5AVlP2b4XLmqWKqthJ2tkvzEV7zNl1AMEAsS2cCrHAxZS5SdMKpmZVquLDt1zdDCzKhIeJkniiQ">
+      </div>
+
+      <div class="reveal reveal-d1 break-inside-avoid rounded-2xl overflow-hidden group">
+        <img alt="Fiesta cumpleaños PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-110" loading="lazy" decoding="async"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9IhG716zP6hoYhqAVxGD3UWCFRrmrqmHZjs8xhOIN_HKn3oeUHf-RtQqR5gNp1mug_4M66_IabPbA9J8m6WrlpOoKSwuJHnXnr_jPh34KlcyoC6TRlkzMWimoutWgq8yyhec13J53aIFSCB9-WJTgtKigOvZmjcp5EYvsIGvGWPsKJINXaO1wLEE-Af9Z7OiZmVosWAETtrCNVWR3EpxKzW59rSXBoHRKW1VIhrdtWq2KOTJhsTtvjkHY7ZdUi6D6jUHqsAzbwRrxJw">
+      </div>
+
+      <div class="reveal reveal-d2 break-inside-avoid rounded-2xl overflow-hidden group">
+        <img alt="PAPALONES catering Santiago" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-110" loading="lazy" decoding="async"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyENPxOtQdMgJ6sJoMYsGZSREbCXdqndsddo5XP5OG9mdx0OepGaB4wdFFAPOCUtZhb6rzKqRsI3HCbZUljh_0y0R-WwrJQfJk5CpzaJ25ZpxRQjlsISK40xHdGBitqVYMzxvJujsulTdvkVV1W7mzjnG6ZLIa2sVyisTWGRG8tIcHPpHYDzvUdsAW5i5DZnCmtO5zbFL5ZfcAZDMpAb2-O7wxgpfhUGN2CUtK7jpsDJyHyIFlgcesqIYS8dnwd4V4lC8CKAxYmJ2LIA">
+      </div>
+
+      <div class="reveal break-inside-avoid rounded-2xl overflow-hidden group">
+        <picture>
+          <source srcset="foto-food.webp" type="image/webp">
+          <img alt="Carrito de papas fritas en evento" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-110" loading="lazy" decoding="async" src="foto-food.jpg">
+        </picture>
+      </div>
+
+      <div class="reveal reveal-d1 break-inside-avoid rounded-2xl overflow-hidden group">
+        <picture>
+          <source srcset="foto-party.webp" type="image/webp">
+          <img alt="Invitados disfrutando cumpleaños PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-110" loading="lazy" decoding="async" src="foto-party.jpg">
+        </picture>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIOS ─────────────────────────────────────── -->
+<section class="py-16 md:py-24 px-4 md:px-12 bg-[#161616] border-y border-white/5">
+  <div class="max-w-screen-xl mx-auto w-full">
+
+    <h2 class="reveal font-headline font-extrabold text-3xl md:text-5xl text-white uppercase tracking-tighter mb-10 md:mb-14 text-center leading-[0.92]">
+      Customer Feedback
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8">
+
+      <div class="reveal quote relative bg-[#1e1e1e] border border-white/8 rounded-2xl p-6 md:p-8 pt-10 md:pt-12">
+        <p class="font-body text-gray-300 text-base leading-relaxed mb-6">El cumpleaños de Martina fue un éxito total. Los niños se fueron felices y los papás también. La atención fue impecable de principio a fin.</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#ffcf00]/20 flex items-center justify-center text-[#ffcf00] font-headline font-extrabold text-sm">V</div>
+          <div>
+            <div class="font-body font-bold text-white text-sm">Valentina M.</div>
+            <div class="font-body text-gray-500 text-xs uppercase tracking-wider">Las Condes</div>
+          </div>
+          <div class="ml-auto text-[#ffcf00] text-sm font-bold tracking-tight">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d1 quote relative bg-[#1e1e1e] border border-white/8 rounded-2xl p-6 md:p-8 pt-10 md:pt-12">
+        <p class="font-body text-gray-300 text-base leading-relaxed mb-6">Profesionales, puntuales y la comida estuvo deliciosa. Llegaron con todo el equipamiento listo. No tuve que preocuparme de nada.</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#ffcf00]/20 flex items-center justify-center text-[#ffcf00] font-headline font-extrabold text-sm">A</div>
+          <div>
+            <div class="font-body font-bold text-white text-sm">Andrés P.</div>
+            <div class="font-body text-gray-500 text-xs uppercase tracking-wider">Vitacura</div>
+          </div>
+          <div class="ml-auto text-[#ffcf00] text-sm font-bold tracking-tight">★★★★★</div>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d2 quote relative bg-[#1e1e1e] border border-white/8 rounded-2xl p-6 md:p-8 pt-10 md:pt-12">
+        <p class="font-body text-gray-300 text-base leading-relaxed mb-6">Superaron todas nuestras expectativas. Los churros y las papas fritas fueron lo más pedido. Regresaremos para el próximo cumpleaños sin duda.</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#ffcf00]/20 flex items-center justify-center text-[#ffcf00] font-headline font-extrabold text-sm">C</div>
+          <div>
+            <div class="font-body font-bold text-white text-sm">Carolina R.</div>
+            <div class="font-body text-gray-500 text-xs uppercase tracking-wider">Providencia</div>
+          </div>
+          <div class="ml-auto text-[#ffcf00] text-sm font-bold tracking-tight">★★★★★</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── COTIZA FORM ──────────────────────────────────────── -->
+<section id="menu-form" class="pt-16 md:pt-24 pb-16 md:pb-24 px-4 md:px-12 bg-[#0e0e0e]">
+  <div class="max-w-screen-xl mx-auto w-full">
+    <div id="cotiza" class="bg-[#161616] border border-white/8 rounded-2xl md:rounded-[2.5rem] px-4 py-8 md:p-20 relative overflow-hidden">
+      <div class="absolute top-0 right-0 w-80 h-80 bg-[#ffcf00] rounded-full blur-[150px] opacity-[.06] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+
+      <div class="relative z-10 text-center mb-10 md:mb-14">
+        <h3 class="reveal font-headline font-extrabold text-3xl md:text-6xl text-white uppercase tracking-tighter mb-3 leading-[0.92]">
+          Lleva el sabor<br><span class="text-[#ffcf00] italic">a tu evento</span>
+        </h3>
+        <p class="reveal reveal-d1 font-body text-gray-400 text-base md:text-lg max-w-xl mx-auto mt-4">Completa el formulario y recibe tu cotización personalizada en menos de 24 horas.</p>
+        <div class="reveal reveal-d2 flex flex-wrap justify-center gap-3 mt-6">
+          <span class="bg-white/5 border border-white/8 rounded-full px-4 py-1.5 text-xs font-body font-semibold text-gray-400 uppercase tracking-wider">Sin costo de cotización</span>
+          <span class="bg-white/5 border border-white/8 rounded-full px-4 py-1.5 text-xs font-body font-semibold text-gray-400 uppercase tracking-wider">Respuesta en 24h</span>
+          <span class="bg-white/5 border border-white/8 rounded-full px-4 py-1.5 text-xs font-body font-semibold text-gray-400 uppercase tracking-wider">Toda la RM</span>
+        </div>
+      </div>
+
+      <div class="w-full rounded-2xl overflow-hidden bg-[#0e0e0e]/60">
         <iframe
           src="https://docs.google.com/forms/d/1PjndDl_gVojhEESdZF3yAFHCcoyL2FYafnKiMQk_tUY/viewform?embedded=true"
           width="100%" height="820" frameborder="0" marginheight="0" marginwidth="0"
-          style="border-radius:1.5rem; display:block; min-height:600px;">Cargando…</iframe>
+          style="border-radius:1rem; display:block; min-height:600px;">Cargando…</iframe>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- ── NOSOTROS ───────────────────────────────── -->
-<section id="nosotros" class="bg-[#121212] py-10 md:py-24 px-4 md:px-12">
+<!-- ── NOSOTROS ─────────────────────────────────────────── -->
+<section id="nosotros" class="py-16 md:py-24 px-4 md:px-12 bg-[#161616] border-t border-white/5">
   <div class="max-w-screen-2xl mx-auto w-full">
-    <div class="flex flex-col lg:flex-row gap-8 md:gap-16 items-start">
+    <div class="flex flex-col lg:flex-row gap-10 md:gap-16 items-start">
 
-      <!-- Text column -->
-      <div class="lg:w-1/3 lg:sticky top-32">
-        <h2 class="font-headline font-extrabold text-3xl sm:text-4xl md:text-7xl text-white uppercase tracking-tighter mb-6 leading-[0.95] md:leading-[0.9]">
+      <div class="lg:w-1/3 lg:sticky top-28">
+        <h2 class="reveal font-headline font-extrabold text-3xl sm:text-4xl md:text-6xl text-white uppercase tracking-tighter mb-6 leading-[0.92]">
           Sobre Nosotros &amp; eventos<br><span class="text-[#ffcf00]">Papalones</span>
         </h2>
-        <p class="font-body text-gray-400 text-lg mb-4 leading-relaxed">
+        <p class="reveal reveal-d1 font-body text-gray-400 text-base md:text-lg mb-4 leading-relaxed">
           Empezamos con tres amigos, un carrito de papas fritas y muchas ganas de hacer algo distinto. Lo que nació como una idea entre amigos hoy es PAPALONES: un equipo comprometido que lleva sabor y buena onda a cada evento.
         </p>
-        <p class="font-body text-gray-400 text-lg mb-4 leading-relaxed">
+        <p class="reveal reveal-d2 font-body text-gray-400 text-base md:text-lg mb-4 leading-relaxed">
           Con el tiempo fuimos creciendo, sumamos nuggets, aros de cebolla y churros al menú, y también fuimos sumando personas. Esos amigos que se fueron uniendo con el tiempo hoy son mucho más que eso: son chefs dedicados que ponen el mismo cariño en cada celebración.
         </p>
-        <p class="font-body text-gray-400 text-lg mb-6 leading-relaxed">
+        <p class="reveal reveal-d3 font-body text-gray-400 text-base md:text-lg mb-6 leading-relaxed">
           Nos especializamos en cumpleaños, celebraciones de fin de año, fiestas y eventos corporativos. Nos adaptamos a cada ocasión porque sabemos que detrás de cada evento hay algo importante que celebrar, y eso merece lo mejor.
         </p>
-        <div class="space-y-2 text-gray-300 font-medium text-base">
-          <div class="flex items-center gap-2"><span class="text-[#ffcf00]">✓</span> Salsas incluidas (ketchup, mayo, mostaza)</div>
-          <div class="flex items-center gap-2"><span class="text-[#ffcf00]">✓</span> Llegamos con todo el equipamiento</div>
-          <div class="flex items-center gap-2"><span class="text-[#ffcf00]">✓</span> Toda la Región Metropolitana</div>
+        <div class="reveal reveal-d4 space-y-3">
+          <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
+            <span class="w-6 h-6 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>
+            Salsas incluidas (ketchup, mayo, mostaza)
+          </div>
+          <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
+            <span class="w-6 h-6 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>
+            Llegamos con todo el equipamiento
+          </div>
+          <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
+            <span class="w-6 h-6 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>
+            Toda la Región Metropolitana
+          </div>
         </div>
       </div>
 
-      <!-- Photo grid -->
+      <!-- Photo grid original -->
       <div class="lg:w-2/3 columns-2 gap-3 md:gap-6 space-y-3 md:space-y-6">
         <div class="break-inside-avoid rounded-3xl overflow-hidden group border border-white/5 shadow-2xl">
-          <img alt="Evento PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125"
+          <img alt="Evento PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125" loading="lazy" decoding="async"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOQLlxt_WYd0p-GqAmP1NHmyKuAhlMaIUvoN-DSuSLlhXzCJi_7jGyzy0tCqULk-lJLXpycqFQyqCakUm0PV07N1eZvKKenKvBlt6NWfBJs8cpY9XtYO6IE3Cml7oU55pvTsv2N0PaZL98A468USmHfo0FBUH1UY-pcPbyic9L9RtT6nauMzGx9CpD5LX2acJQUoa8QM3snAwNvLfvbu9-bhnv1xv3kJJR340mKL26wcGZxwe41o-Bbp0G7l9A0Yb7IE4Nwi0Zp5EkRg">
         </div>
         <div class="break-inside-avoid rounded-3xl overflow-hidden group border border-white/5 shadow-2xl">
-          <img alt="Comida PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125"
+          <img alt="Comida PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125" loading="lazy" decoding="async"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6lVlzlals2dKfWeeqMaw8s2XxhvxTgOi_FyZOGspDKkauMleq9IHO0GdUXUZ4HTsnFrdPqCoJs5ht715Prn60Xs3VkMEGOuTsBSQfpxuR1JbE_bEfWuDzZoZ194rarzkmwuU0z3KhKvvMZbNNYky6gOB5BF7eEO3E4th-svMEk8_LC-9elqJl8VVxf3-WRJuIOHMHwihqbyTS2useNfMwRj1FOLH5NuSqyDk3UaEI2EVeXj9_Nu7c4qkFgUcBtR4XhknUjAcEX-KxEQ">
         </div>
         <div class="break-inside-avoid rounded-3xl overflow-hidden group border border-white/5 shadow-2xl">
-          <img alt="Party PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125"
+          <img alt="Party PAPALONES" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125" loading="lazy" decoding="async"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwc73A8WkcrFU7FThAaFWLwNxEb2SmEmqrEw8_xWYNFwJzliy7g0P6ZjQ77SYGXbGrLvziFFlRdlBexpUCmXP4RBOsEmxlsud4G3T65ljs4zDkHvaZ_FTbM8H7MqbZUTNOBsYyzlaS-dVIRJh6U4_qApylMThEJo-VixzZCBDRof-0d8QAy3GyPpQpMhxrgj_JTydiMT3uPqJE61dZXp2U-MzeF6MDL_fnKTm-ECrP1NLbEitgySHhg9pgcC-JHRx248kKqCeXE3zjrg">
         </div>
         <div class="break-inside-avoid rounded-3xl overflow-hidden group border border-white/5 shadow-2xl">
-          <img alt="Papas Papalones" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125"
+          <img alt="Papas Papalones" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125" loading="lazy" decoding="async"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEtgd_uXBt7bWvLT8sd3S4a2ScsXfSGQOCdSHUGrw_0mYmSd3FRQ0GQXlJau62SFdulqzEa6qFS3IfbfWEZdKPdzseTflZiL4uDr_yB20gsjuHNA0N9mBSbe3IimkVP5Gmxyd28gADyYtty6vSvzbErGQ331gs-GC0LV77xKo1MprGcmGaTdY2ha-k_WoQljSss6A5AVlP2b4XLmqWKqthJ2tkvzEV7zNl1AMEAsS2cCrHAxZS5SdMKpmZVquLDt1zdDCzKhIeJkniiQ">
         </div>
         <div class="break-inside-avoid rounded-3xl overflow-hidden group border border-white/5 shadow-2xl">
-          <img alt="Evento foto" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125"
+          <img alt="Evento foto" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125" loading="lazy" decoding="async"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9IhG716zP6hoYhqAVxGD3UWCFRrmrqmHZjs8xhOIN_HKn3oeUHf-RtQqR5gNp1mug_4M66_IabPbA9J8m6WrlpOoKSwuJHnXnr_jPh34KlcyoC6TRlkzMWimoutWgq8yyhec13J53aIFSCB9-WJTgtKigOvZmjcp5EYvsIGvGWPsKJINXaO1wLEE-Af9Z7OiZmVosWAETtrCNVWR3EpxKzW59rSXBoHRKW1VIhrdtWq2KOTJhsTtvjkHY7ZdUi6D6jUHqsAzbwRrxJw">
         </div>
         <div class="break-inside-avoid rounded-3xl overflow-hidden group border border-white/5 shadow-2xl">
-          <img alt="Evento foto" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125"
+          <img alt="Evento foto" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125" loading="lazy" decoding="async"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyENPxOtQdMgJ6sJoMYsGZSREbCXdqndsddo5XP5OG9mdx0OepGaB4wdFFAPOCUtZhb6rzKqRsI3HCbZUljh_0y0R-WwrJQfJk5CpzaJ25ZpxRQjlsISK40xHdGBitqVYMzxvJujsulTdvkVV1W7mzjnG6ZLIa2sVyisTWGRG8tIcHPpHYDzvUdsAW5i5DZnCmtO5zbFL5ZfcAZDMpAb2-O7wxgpfhUGN2CUtK7jpsDJyHyIFlgcesqIYS8dnwd4V4lC8CKAxYmJ2LIA">
         </div>
         <div class="break-inside-avoid rounded-3xl overflow-hidden group border border-white/5 shadow-2xl">
-          <img alt="Evento PAPALONES - carrito en acción" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125"
-            src="foto-food.jpg">
+          <picture>
+            <source srcset="foto-food.webp" type="image/webp">
+            <img alt="Evento PAPALONES - carrito en acción" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125" loading="lazy" decoding="async" src="foto-food.jpg">
+          </picture>
         </div>
         <div class="break-inside-avoid rounded-3xl overflow-hidden group border border-white/5 shadow-2xl">
-          <img alt="Evento PAPALONES - invitados disfrutando" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125"
-            src="foto-party.jpg">
+          <picture>
+            <source srcset="foto-party.webp" type="image/webp">
+            <img alt="Evento PAPALONES - invitados disfrutando" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700 brightness-90 contrast-125" loading="lazy" decoding="async" src="foto-party.jpg">
+          </picture>
         </div>
       </div>
 
@@ -304,51 +587,43 @@
   </div>
 </section>
 
-<!-- ── CONTACTO ───────────────────────────────── -->
-<section id="contacto" class="bg-[#0a0a0a] pt-10 md:pt-32 pb-12 px-4 md:px-12 relative overflow-hidden">
-  <!-- Glow -->
-  <div class="absolute inset-0 pointer-events-none opacity-20">
-    <div class="absolute w-[600px] h-[600px] bg-[#ffcf00] rounded-full blur-[150px] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></div>
+<!-- ── CONTACTO ─────────────────────────────────────────── -->
+<section id="contacto" class="bg-[#0e0e0e] pt-16 md:pt-32 pb-16 px-4 md:px-12 relative overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none opacity-15">
+    <div class="absolute w-[500px] h-[500px] bg-[#ffcf00] rounded-full blur-[160px] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></div>
   </div>
 
   <div class="max-w-screen-xl mx-auto w-full text-center relative z-10 mb-10 md:mb-24">
-    <h2 class="font-headline font-extrabold text-4xl sm:text-5xl md:text-8xl text-white uppercase tracking-tighter mb-8 leading-[0.9] md:leading-[0.85]">
-      ¿Dudas?<br><span class="text-[#ffcf00]">¡Hablemos!</span>
+    <h2 class="reveal font-headline font-extrabold text-4xl sm:text-5xl md:text-8xl text-white uppercase tracking-tighter mb-8 leading-[0.9]">
+      ¿Dudas?<br><span class="text-[#ffcf00] italic">¡Hablemos!</span>
     </h2>
 
-    <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-16">
-      <!-- Teléfono -->
-      <a href="tel:+56986087712" class="flex items-center gap-3 text-gray-300 hover:text-[#ffcf00] transition-colors group">
-        <span class="material-symbols-outlined text-4xl group-hover:scale-110 transition-transform">call</span>
-        <span class="font-headline font-extrabold text-2xl tracking-tight">+56 9 8608 7712</span>
+    <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 mb-12">
+      <a href="tel:+56986087712" class="reveal flex items-center gap-3 text-gray-300 hover:text-[#ffcf00] transition-colors group">
+        <span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">call</span>
+        <span class="font-headline font-extrabold text-xl md:text-2xl tracking-tight">+56 9 8608 7712</span>
       </a>
-
-      <div class="hidden md:block w-2 h-2 rounded-full bg-gray-700"></div>
-
-      <!-- Instagram -->
-      <a href="https://instagram.com/papa_lones" target="_blank" rel="noopener" class="flex items-center gap-3 text-gray-300 hover:text-[#ffcf00] transition-colors group">
-        <span class="material-symbols-outlined text-4xl group-hover:scale-110 transition-transform">alternate_email</span>
-        <span class="font-headline font-extrabold text-2xl tracking-tight">@papa_lones</span>
+      <div class="hidden md:block w-1.5 h-1.5 rounded-full bg-gray-700"></div>
+      <a href="https://instagram.com/papa_lones" target="_blank" rel="noopener" class="reveal reveal-d1 flex items-center gap-3 text-gray-300 hover:text-[#ffcf00] transition-colors group">
+        <span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">alternate_email</span>
+        <span class="font-headline font-extrabold text-xl md:text-2xl tracking-tight">@papa_lones</span>
       </a>
     </div>
 
-    <a href="tel:+56986087712" class="inline-block bg-[#ffcf00] text-black rounded-full px-12 py-6 font-headline font-extrabold uppercase tracking-widest text-xl hover:bg-yellow-400 hover:-translate-y-1 transition-all duration-300 shadow-[0_10px_40px_rgba(255,207,0,0.3)]">
-      Cotizar ahora
+    <a href="tel:+56986087712" class="reveal reveal-d2 inline-block cta-shimmer text-black rounded-full px-12 py-5 font-headline font-extrabold uppercase tracking-widest text-lg hover:-translate-y-1 transition-transform duration-300 shadow-[0_10px_40px_rgba(255,207,0,0.3)]">
+      Llamar ahora
     </a>
   </div>
 
-  <!-- Footer -->
-  <footer class="w-full border-t border-white/10 flex flex-col md:flex-row justify-between items-center px-4 md:px-12 py-10 gap-6 relative z-10">
-    <div class="text-[#ffcf00] font-headline font-extrabold text-2xl uppercase tracking-tighter italic">
-      PAPALONES
-    </div>
+  <footer class="w-full border-t border-white/8 flex flex-col md:flex-row justify-between items-center px-0 md:px-4 py-10 gap-6 relative z-10">
+    <div class="text-[#ffcf00] font-headline font-extrabold text-xl uppercase tracking-tighter italic">PAPALONES</div>
     <div class="flex gap-6 items-center font-body text-xs tracking-widest uppercase">
-      <a href="#inicio"   class="text-gray-500 hover:text-[#ffcf00] transition-colors">Inicio</a>
-      <a href="#menu"     class="text-gray-500 hover:text-[#ffcf00] transition-colors">Menú</a>
-      <a href="#nosotros" class="text-gray-500 hover:text-[#ffcf00] transition-colors">Nosotros</a>
-      <a href="https://instagram.com/papa_lones" target="_blank" rel="noopener" class="text-gray-500 hover:text-[#ffcf00] transition-colors">Instagram</a>
+      <a href="#inicio"   class="text-gray-600 hover:text-[#ffcf00] transition-colors">Inicio</a>
+      <a href="#menu"     class="text-gray-600 hover:text-[#ffcf00] transition-colors">Menú</a>
+      <a href="#nosotros" class="text-gray-600 hover:text-[#ffcf00] transition-colors">Nosotros</a>
+      <a href="https://instagram.com/papa_lones" target="_blank" rel="noopener" class="text-gray-600 hover:text-[#ffcf00] transition-colors">Instagram</a>
     </div>
-    <div class="font-body text-xs tracking-widest uppercase text-gray-600 text-center md:text-right">
+    <div class="font-body text-xs tracking-widest uppercase text-gray-700 text-center md:text-right">
       © 2025 PAPALONES. THE KINETIC KITCHEN.
     </div>
   </footer>
@@ -356,28 +631,13 @@
 
 </main>
 
-<!-- ── WHATSAPP FLOTANTE ──────────────────────── -->
+<!-- ── WHATSAPP FLOTANTE ──────────────────────────────── -->
 <a
   href="https://wa.me/message/Q3ZFMO4HQQMAL1"
   target="_blank"
   rel="noopener"
-  id="wa-btn"
   title="Escríbenos por WhatsApp"
-  style="
-    position: fixed;
-    bottom: 28px;
-    right: 28px;
-    z-index: 9999;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: #25D366;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.45);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  "
+  style="position:fixed;bottom:28px;right:28px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.45);transition:transform 0.2s ease,box-shadow 0.2s ease;"
   onmouseover="this.style.transform='scale(1.12)';this.style.boxShadow='0 6px 28px rgba(37,211,102,0.6)'"
   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 4px 20px rgba(37,211,102,0.45)'"
 >
@@ -386,47 +646,34 @@
   </svg>
 </a>
 
-<!-- ── SCRIPTS ────────────────────────────────── -->
+<!-- ── STICKY BAR MÓVIL ────────────────────────────────── -->
+<div id="sticky-bar" class="fixed bottom-0 left-0 right-0 z-[9990] bg-[#0e0e0e]/95 backdrop-blur-xl border-t border-white/8 px-4 py-3 gap-3 items-center">
+  <a href="https://wa.me/message/Q3ZFMO4HQQMAL1" target="_blank" rel="noopener"
+    class="flex-1 flex items-center justify-center gap-2 bg-[#25D366] text-white rounded-xl py-3.5 font-headline font-extrabold uppercase tracking-tight text-sm">
+    <svg viewBox="0 0 32 32" width="18" height="18" fill="white"><path d="M16 .5C7.44.5.5 7.44.5 16c0 2.84.74 5.51 2.04 7.83L.5 31.5l7.87-2.06A15.45 15.45 0 0016 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.27a12.7 12.7 0 01-6.47-1.77l-.46-.27-4.67 1.22 1.25-4.56-.3-.47A12.72 12.72 0 1116 28.77zm6.98-9.54c-.38-.19-2.26-1.12-2.61-1.24-.35-.13-.6-.19-.86.19-.25.38-.98 1.24-1.2 1.5-.22.25-.44.28-.82.09-.38-.19-1.61-.59-3.07-1.89-1.13-1-1.9-2.24-2.12-2.62-.22-.38-.02-.59.17-.77.17-.17.38-.44.57-.66.19-.22.25-.38.38-.63.13-.25.06-.47-.03-.66-.1-.19-.87-2.09-1.19-2.86-.31-.75-.63-.65-.86-.66l-.73-.01c-.25 0-.66.09-1.01.47-.35.38-1.32 1.29-1.32 3.14s1.35 3.64 1.54 3.89c.19.25 2.66 4.06 6.44 5.69.9.39 1.6.62 2.15.79.9.28 1.73.24 2.38.15.73-.11 2.26-.92 2.58-1.81.32-.89.32-1.65.22-1.81-.09-.16-.35-.25-.73-.44z"/></svg>
+    WhatsApp
+  </a>
+  <a href="#cotiza"
+    class="flex-1 flex items-center justify-center cta-shimmer text-black rounded-xl py-3.5 font-headline font-extrabold uppercase tracking-tight text-sm">
+    Cotizar evento
+  </a>
+</div>
+
 <script>
-  // Mobile menu toggle
-  const btn   = document.getElementById('menu-btn');
-  const menu  = document.getElementById('mobile-menu');
-  const icon  = document.getElementById('menu-icon');
+  // Mobile menu
+  const btn=document.getElementById('menu-btn'),menu=document.getElementById('mobile-menu'),icon=document.getElementById('menu-icon');
+  btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');icon.textContent=o?'close':'menu';});
+  document.querySelectorAll('.mobile-link').forEach(l=>l.addEventListener('click',()=>{menu.classList.remove('open');icon.textContent='menu';}));
 
-  btn.addEventListener('click', () => {
-    const isOpen = menu.classList.toggle('open');
-    icon.textContent = isOpen ? 'close' : 'menu';
-  });
+  // Active nav link
+  const sections=document.querySelectorAll('section[id]'),navLinks=document.querySelectorAll('a.nav-link');
+  const navObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){navLinks.forEach(l=>l.classList.remove('nav-link-active','text-white'));const a=document.querySelector(`a.nav-link[href="#${e.target.id}"]`);if(a)a.classList.add('nav-link-active','text-white');}});},{threshold:0.35});
+  sections.forEach(s=>navObs.observe(s));
 
-  // Close mobile menu when a link is clicked
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.remove('open');
-      icon.textContent = 'menu';
-    });
-  });
-
-  // Highlight active nav link on scroll
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('a.nav-link');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        navLinks.forEach(link => {
-          link.classList.remove('text-white', 'border-b-2', 'border-[#ffcf00]');
-          link.classList.add('text-gray-400');
-        });
-        const active = document.querySelector(`a[href="#${entry.target.id}"]`);
-        if (active) {
-          active.classList.remove('text-gray-400');
-          active.classList.add('text-white', 'border-b-2', 'border-[#ffcf00]');
-        }
-      }
-    });
-  }, { threshold: 0.35 });
-
-  sections.forEach(s => observer.observe(s));
+  // Scroll reveal
+  const revealEls=document.querySelectorAll('.reveal');
+  const revObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  revealEls.forEach(el=>revObs.observe(el));
 </script>
 
 </body>
