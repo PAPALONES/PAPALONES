@@ -1,0 +1,14 @@
+# Backups locales
+_originales/
+*.DS_Store
+
+# Datos internos / de clientes — NO publicar en repo público
+Cotizacion_*.pdf
+Cotizacion_*.xlsx
+*.xlsx
+cotizacion_automatica.gs
+papalones-crm-v4-clean.html
+papalones-crm-v4.txt
+
+# Carpeta de config local del asistente
+.claude/

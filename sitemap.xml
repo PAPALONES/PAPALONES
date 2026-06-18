@@ -2,7 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://papalones.cl/</loc>
-    <lastmod>2025-06-17</lastmod>
+    <lastmod>2026-06-18</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://papalones.cl/cumpleanos</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://papalones.cl/eventos</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://papalones.cl/matrimonios</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://papalones.cl/menu</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://papalones.cl/cobertura</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://papalones.cl/cotiza</loc>
+    <lastmod>2026-06-18</lastmod>
+    <priority>0.8</priority>
   </url>
 </urlset>

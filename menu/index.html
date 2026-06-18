@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Google Analytics 4 (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G8QKQ5P2R2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G8QKQ5P2R2');
+</script>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Menú: papas fritas, churros, nuggets y aros | Papalones</title>
+<meta name="description" content="El menú del carrito Papalones: papas fritas, churros, nuggets y aros de cebolla recién hechos para tu evento en Santiago. Arma tu menú y cotiza por WhatsApp.">
+<meta name="keywords" content="papas fritas, churros, nuggets, aros de cebolla, menú carrito de comida santiago">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Menú: papas fritas, churros, nuggets y aros | Papalones">
+<meta property="og:description" content="Papas fritas, churros, nuggets y aros de cebolla recién hechos para tu evento en Santiago. Arma tu menú y cotiza por WhatsApp.">
+<meta property="og:url" content="https://papalones.cl/menu">
+<meta property="og:image" content="https://papalones.cl/og-image.jpg">
+<meta property="og:locale" content="es_CL">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://papalones.cl/menu">
+
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Epilogue:ital,wght@0,400;0,700;0,800;0,900;1,900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = { darkMode: "class", theme: { extend: {
+    fontFamily: { "headline": ["Epilogue"], "body": ["Be Vietnam Pro"] } } } }
+</script>
+
+<style>
+  :root { --gold: #ffcf00; }
+  * { box-sizing: border-box; }
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+  html { scroll-behavior: smooth; }
+  body::after { content:''; position:fixed; inset:0; pointer-events:none; z-index:9998; opacity:.025;
+    background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-size:128px; }
+  #mobile-menu { transition: max-height .35s ease, opacity .3s ease; max-height:0; opacity:0; overflow:hidden; }
+  #mobile-menu.open { max-height:420px; opacity:1; }
+  .reveal { opacity:0; transform:translateY(36px); transition:opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1); }
+  .reveal.visible { opacity:1; transform:none; }
+  .reveal-d1 { transition-delay:.1s; } .reveal-d2 { transition-delay:.2s; }
+  @keyframes shimmer { 0%{background-position:-200% center;} 100%{background-position:200% center;} }
+  .cta-shimmer { background:linear-gradient(105deg,#ffcf00 40%,#fff7a0 50%,#ffcf00 60%); background-size:200% auto; animation:shimmer 3s linear infinite; }
+  .menu-num { font-family:'Epilogue',serif; font-weight:900; font-style:italic; font-size:clamp(3rem,8vw,5rem); color:rgba(255,207,0,.08); line-height:1; user-select:none; position:absolute; bottom:.5rem; right:1rem; }
+</style>
+</head>
+
+<body class="bg-[#0e0e0e] text-white font-body antialiased selection:bg-[#ffcf00] selection:text-black dark">
+
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/90 backdrop-blur-xl border-b border-white/5">
+  <div class="flex justify-between items-center w-full px-5 md:px-10 py-4 md:py-5 max-w-screen-2xl mx-auto">
+    <a href="/" class="text-2xl md:text-3xl font-extrabold italic tracking-tighter text-white font-headline uppercase">PAPALONES</a>
+    <div class="hidden md:flex space-x-8 items-center">
+      <a href="/cumpleanos"  class="text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors">Cumpleaños</a>
+      <a href="/matrimonios" class="text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors">Matrimonios</a>
+      <a href="/eventos"     class="text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors">Eventos</a>
+      <a href="/menu"        class="text-white font-headline font-extrabold uppercase tracking-tighter text-sm border-b-2 border-[#ffcf00] pb-1">Menú</a>
+    </div>
+    <a href="/cotiza" class="hidden md:block cta-shimmer text-black px-6 py-3 rounded-full font-headline font-extrabold uppercase tracking-tight text-sm hover:-translate-y-0.5 transition-transform duration-300 shadow-[0_6px_30px_rgba(255,207,0,0.35)]">Cotiza tu evento</a>
+    <button id="menu-btn" class="md:hidden text-[#ffcf00]" aria-label="Abrir menú"><span id="menu-icon" class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="md:hidden bg-[#161616] border-t border-white/5 px-6">
+    <div class="flex flex-col py-3">
+      <a href="/" class="font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8">Inicio</a>
+      <a href="/cumpleanos" class="font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8">Cumpleaños</a>
+      <a href="/matrimonios" class="font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8">Matrimonios</a>
+      <a href="/eventos" class="font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8">Eventos</a>
+      <a href="/menu" class="font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-white border-b border-white/8">Menú</a>
+      <a href="/cotiza" class="font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300">Cotiza</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<section class="relative pt-28 pb-10 md:pt-40 md:pb-16 px-5 md:px-12 overflow-hidden">
+  <div class="absolute inset-0 pointer-events-none overflow-hidden"><div class="absolute w-[600px] h-[600px] bg-[#ffcf00] rounded-full blur-[140px] opacity-[.07] -top-[300px] left-1/2 -translate-x-1/2"></div></div>
+  <div class="max-w-screen-xl mx-auto w-full relative z-10">
+    <nav class="reveal text-xs font-body uppercase tracking-widest text-gray-500 mb-6"><a href="/" class="hover:text-[#ffcf00]">Inicio</a> / <span class="text-gray-300">Menú</span></nav>
+    <h1 class="reveal reveal-d1 font-headline font-extrabold text-4xl sm:text-5xl md:text-7xl text-[#ffcf00] uppercase tracking-tighter leading-[0.95] max-w-4xl mb-6">Nuestro menú</h1>
+    <p class="reveal reveal-d2 font-body text-gray-300 text-base md:text-xl max-w-2xl leading-relaxed">Las papas fritas son nuestro producto estrella. Sumas churros, nuggets y aros de cebolla y armas el menú según tu evento. Todo recién hecho en el mismo carro, a la vista de tus invitados.</p>
+  </div>
+</section>
+
+<section class="pb-16 md:pb-24 px-4 md:px-12 bg-[#0e0e0e]">
+  <div class="max-w-screen-2xl mx-auto w-full grid grid-cols-2 gap-3 md:gap-6 lg:gap-10">
+
+    <div class="reveal group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-[#161616] border border-white/8 flex flex-col">
+      <div class="h-[150px] md:h-[300px] overflow-hidden"><img alt="Papas fritas recién hechas del carrito Papalones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="/papas.jpg" loading="lazy" decoding="async"></div>
+      <div class="p-4 md:p-8 relative"><span class="menu-num">01</span><h2 class="font-headline font-extrabold text-lg md:text-3xl text-white uppercase tracking-tighter mb-2 md:mb-3 italic">Papas Fritas</h2><p class="font-body text-gray-400 text-xs md:text-base leading-relaxed">Papas fritas clásicas, delgadas y crujientes, en porciones de 50 gramos en bolsas papel mantequilla. Combínalas con Ketchup, Mayonesa y Mostaza.</p></div>
+    </div>
+
+    <div class="reveal reveal-d1 group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-[#161616] border border-white/8 flex flex-col">
+      <div class="h-[150px] md:h-[300px] overflow-hidden"><img alt="Nuggets de pollo del carrito Papalones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDF05Q7Wll2cFXsRS--xW7dEis3QA_PYLLhGJn1HdY5H8pB6kGGcLo_upDCB2rcO5Sxw_cMebXi9v0Tvof9EbsBNpROxQqf8hFGwYBuT70hj-HvsBL9xK6Rue1lRP9qfM_69od91nWNFCXeuS8BLIug6IbwbBXu7m8ASlyzm2YfoKQYm1Tsik1Fi5nMPN3wtZstNqJ_sDn_BpIsFiVb08XsgvP2wNNxpLjq1PMh9ojLaiszyk6d33WNz_5K59YnNMqYvsMN4jGV7uE" loading="lazy" decoding="async"></div>
+      <div class="p-4 md:p-8 relative"><span class="menu-num">02</span><h2 class="font-headline font-extrabold text-lg md:text-3xl text-white uppercase tracking-tighter mb-2 md:mb-3 italic">Nuggets</h2><p class="font-body text-gray-400 text-xs md:text-base leading-relaxed">Nuggets de pollo ultra crocantes, servidos en porciones de 6 nuggets por porción en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p></div>
+    </div>
+
+    <div class="reveal reveal-d1 group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-[#161616] border border-white/8 flex flex-col">
+      <div class="h-[150px] md:h-[300px] overflow-hidden"><img alt="Aros de cebolla del carrito Papalones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr3DbjOqrPfPDYyPWS2aShNuzpmgF2Nn9oUgiHSooZS8JcuVHKTpAnaJa-Q2L54YOZyG0eCzDMnipVHZqcyKhoitIKAg2fUuKYKode1izvsZjtvi67upmZ73t1fU4pKiB6bW0-y7ltX3jyAi_NiJ5Mx7MJWUbwIIycFyThoWazEcMNUL-kmJ62UBx7GCfoipBDnboM6yIIRlAF4JtMSQZrdo57wXRVZo-XnWybD8cxGUjTErT4rATpHo3EKx7yavPh-P_oyirdtlo" loading="lazy" decoding="async"></div>
+      <div class="p-4 md:p-8 relative"><span class="menu-num">03</span><h2 class="font-headline font-extrabold text-lg md:text-3xl text-white uppercase tracking-tighter mb-2 md:mb-3 italic">Aros de Cebolla</h2><p class="font-body text-gray-400 text-xs md:text-base leading-relaxed">Nuestros Aros de Cebolla son la mezcla perfecta entre un dulce natural suave y el clásico sabor caramelizado. Servidos en porciones de 7 aros en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p></div>
+    </div>
+
+    <div class="reveal reveal-d2 group relative overflow-hidden rounded-2xl md:rounded-[2rem] bg-[#161616] border border-white/8 flex flex-col">
+      <div class="h-[150px] md:h-[300px] overflow-hidden"><img alt="Churros con azúcar flor del carrito Papalones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCir6qgM90tIkMe0rLX6qs9M-wI6LvB6zvcVctqwOPVMYhjDEAVUtPL4JUth6xlP7rHAcd2hG07J3bPMgTQN3jAfQ2brlMBn-ud134zGVI6OcLlCsuTcfmTj5aJfHrV_7Z8jLa6jrKL73KSMmZLxS6aTtXCBD-RYsz1A_A0M6rgEeQ9unDSrHttR-8EyrEso26E-YzzkeGmXhC0PBXbkYMhJzQmY6yftK_kLyK9DdEVjvwZ7YR7Ovg4R9dZrp6NqVU-LyFTcFWyGso" loading="lazy" decoding="async"></div>
+      <div class="p-4 md:p-8 relative"><span class="menu-num">04</span><h2 class="font-headline font-extrabold text-lg md:text-3xl text-white uppercase tracking-tighter mb-2 md:mb-3 italic">Churros</h2><p class="font-body text-gray-400 text-xs md:text-base leading-relaxed">La guinda del postre: churros crujientes y calientes para cerrar tu celebración con algo dulce. Servidos en porciones de 4 churros en platos de cartón ecológicos y reciclables, acompañados con azúcar flor.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<section class="py-14 md:py-24 px-5 md:px-12 bg-[#161616] border-y border-white/5">
+  <div class="max-w-3xl mx-auto w-full text-center">
+    <h2 class="reveal font-headline font-extrabold text-3xl sm:text-4xl md:text-5xl text-white uppercase tracking-tighter leading-[0.92] mb-6">¿Para qué ocasión<br><span class="text-[#ffcf00] italic">es tu evento?</span></h2>
+    <p class="reveal reveal-d1 font-body text-gray-400 text-base md:text-lg mb-8">Adaptamos el carro al tipo de celebración. Mira cómo funciona para cada ocasión:</p>
+    <div class="reveal reveal-d1 flex flex-wrap justify-center gap-3">
+      <a href="/cumpleanos" class="border border-white/15 rounded-full px-6 py-3 font-headline font-extrabold uppercase tracking-tight text-sm text-white hover:border-[#ffcf00] hover:text-[#ffcf00] transition-colors">Cumpleaños</a>
+      <a href="/matrimonios" class="border border-white/15 rounded-full px-6 py-3 font-headline font-extrabold uppercase tracking-tight text-sm text-white hover:border-[#ffcf00] hover:text-[#ffcf00] transition-colors">Matrimonios</a>
+      <a href="/eventos" class="border border-white/15 rounded-full px-6 py-3 font-headline font-extrabold uppercase tracking-tight text-sm text-white hover:border-[#ffcf00] hover:text-[#ffcf00] transition-colors">Eventos</a>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 md:py-28 px-5 md:px-12 bg-[#0e0e0e] relative overflow-hidden text-center">
+  <div class="absolute inset-0 pointer-events-none opacity-15"><div class="absolute w-[500px] h-[500px] bg-[#ffcf00] rounded-full blur-[160px] bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2"></div></div>
+  <div class="max-w-3xl mx-auto relative z-10">
+    <h2 class="reveal font-headline font-extrabold text-4xl md:text-6xl text-white uppercase tracking-tighter leading-[0.92] mb-6">Arma tu menú<br><span class="text-[#ffcf00] italic">y cotiza</span></h2>
+    <p class="reveal reveal-d1 font-body text-gray-400 text-base md:text-lg mb-8">Cuéntanos qué quieres en tu carro y cuántos invitados esperas. Te asesoramos las porciones y te respondemos el mismo día.</p>
+    <a href="https://wa.me/56986087712?text=Hola%20Papalones%2C%20quiero%20armar%20mi%20menú%20y%20cotizar%20el%20carrito%20de%20papas%20fritas." target="_blank" rel="noopener" class="reveal reveal-d2 inline-block cta-shimmer text-black rounded-full px-12 py-5 font-headline font-extrabold uppercase tracking-widest text-lg hover:-translate-y-1 transition-transform duration-300 shadow-[0_10px_40px_rgba(255,207,0,0.3)]">Cotizar por WhatsApp</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-[#0a0a0a] border-t border-white/8 px-5 md:px-12 py-10">
+  <div class="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+    <div class="text-[#ffcf00] font-headline font-extrabold text-xl uppercase tracking-tighter italic">PAPALONES</div>
+    <div class="flex gap-6 items-center font-body text-xs tracking-widest uppercase">
+      <a href="/" class="text-gray-600 hover:text-[#ffcf00] transition-colors">Inicio</a>
+      <a href="/cotiza" class="text-gray-600 hover:text-[#ffcf00] transition-colors">Cotiza</a>
+      <a href="https://instagram.com/papa_lones" target="_blank" rel="noopener" class="text-gray-600 hover:text-[#ffcf00] transition-colors">Instagram</a>
+    </div>
+    <div class="font-body text-xs tracking-widest uppercase text-gray-700">© 2025 PAPALONES</div>
+  </div>
+</footer>
+
+<a href="https://wa.me/message/Q3ZFMO4HQQMAL1" target="_blank" rel="noopener" title="Escríbenos por WhatsApp" style="position:fixed;bottom:28px;right:28px;z-index:9999;width:56px;height:56px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.45);">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="30" height="30" fill="white"><path d="M16 .5C7.44.5.5 7.44.5 16c0 2.84.74 5.51 2.04 7.83L.5 31.5l7.87-2.06A15.45 15.45 0 0016 31.5C24.56 31.5 31.5 24.56 31.5 16S24.56.5 16 .5zm0 28.27a12.7 12.7 0 01-6.47-1.77l-.46-.27-4.67 1.22 1.25-4.56-.3-.47A12.72 12.72 0 1116 28.77zm6.98-9.54c-.38-.19-2.26-1.12-2.61-1.24-.35-.13-.6-.19-.86.19-.25.38-.98 1.24-1.2 1.5-.22.25-.44.28-.82.09-.38-.19-1.61-.59-3.07-1.89-1.13-1-1.9-2.24-2.12-2.62-.22-.38-.02-.59.17-.77.17-.17.38-.44.57-.66.19-.22.25-.38.38-.63.13-.25.06-.47-.03-.66-.1-.19-.87-2.09-1.19-2.86-.31-.75-.63-.65-.86-.66l-.73-.01c-.25 0-.66.09-1.01.47-.35.38-1.32 1.29-1.32 3.14s1.35 3.64 1.54 3.89c.19.25 2.66 4.06 6.44 5.69.9.39 1.6.62 2.15.79.9.28 1.73.24 2.38.15.73-.11 2.26-.92 2.58-1.81.32-.89.32-1.65.22-1.81-.09-.16-.35-.25-.73-.44z"/></svg>
+</a>
+
+<script>
+  const btn=document.getElementById('menu-btn'),menu=document.getElementById('mobile-menu'),icon=document.getElementById('menu-icon');
+  btn.addEventListener('click',()=>{const o=menu.classList.toggle('open');icon.textContent=o?'close':'menu';});
+  const revObs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revObs.unobserve(e.target);}});},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
+  document.addEventListener('click',function(e){
+    var a=e.target.closest('a'); if(!a||typeof gtag!=='function') return;
+    var h=a.getAttribute('href')||'';
+    if(h.indexOf('wa.me')>-1||h.indexOf('whatsapp')>-1){gtag('event','whatsapp_click',{event_category:'conversion',event_label:location.pathname});}
+    else if(h.indexOf('tel:')===0){gtag('event','phone_click',{event_category:'conversion',event_label:location.pathname});}
+    else if(h.indexOf('mailto:')===0){gtag('event','email_click',{event_category:'conversion',event_label:location.pathname});}
+    else if(h==='#form'||h.indexOf('#cotiza')>-1||h==='/cotiza'){gtag('event','form_open',{event_category:'conversion',event_label:location.pathname});}
+  });
+</script>
+
+</body>
+</html>
