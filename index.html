@@ -192,7 +192,7 @@
     transition: max-height .35s ease, opacity .3s ease;
     max-height: 0; opacity: 0; overflow: hidden;
   }
-  #mobile-menu.open { max-height: 420px; opacity: 1; }
+  #mobile-menu.open { max-height: 80svh; opacity: 1; }
 
   /* Scroll reveal */
   .reveal {
@@ -273,31 +273,38 @@
       PAPALONES
     </a>
 
-    <div class="hidden md:flex space-x-8 items-center">
-      <a href="#inicio"   class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors duration-200">Inicio</a>
-      <a href="#menu"     class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors duration-200">Menú</a>
-      <a href="#galeria"  class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors duration-200">Galería</a>
-      <a href="#faq"      class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors duration-200">FAQ</a>
-      <a href="#nosotros" class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-sm hover:text-white transition-colors duration-200">Nosotros</a>
+    <div class="hidden lg:flex space-x-5 xl:space-x-7 items-center">
+      <a href="#inicio"        class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-xs xl:text-sm hover:text-white transition-colors duration-200">Inicio</a>
+      <a href="#como-funciona" class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-xs xl:text-sm hover:text-white transition-colors duration-200">Cómo funciona</a>
+      <a href="#menu"          class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-xs xl:text-sm hover:text-white transition-colors duration-200">Menú</a>
+      <a href="#ocasiones"     class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-xs xl:text-sm hover:text-white transition-colors duration-200">Ocasiones</a>
+      <a href="#galeria"       class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-xs xl:text-sm hover:text-white transition-colors duration-200">Galería</a>
+      <a href="#cobertura"     class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-xs xl:text-sm hover:text-white transition-colors duration-200">Cobertura</a>
+      <a href="#faq"           class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-xs xl:text-sm hover:text-white transition-colors duration-200">FAQ</a>
+      <a href="#nosotros"      class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-xs xl:text-sm hover:text-white transition-colors duration-200">Nosotros</a>
+      <a href="#contacto"      class="nav-link text-gray-400 font-headline font-extrabold uppercase tracking-tighter text-xs xl:text-sm hover:text-white transition-colors duration-200">Contacto</a>
     </div>
 
-    <a href="#cotiza" class="hidden md:block cta-shimmer text-black px-6 py-3 rounded-full font-headline font-extrabold uppercase tracking-tight text-sm hover:-translate-y-0.5 transition-transform duration-300 shadow-[0_6px_30px_rgba(255,207,0,0.35)]">
+    <a href="#cotiza" class="hidden lg:block cta-shimmer text-black px-6 py-3 rounded-full font-headline font-extrabold uppercase tracking-tight text-sm hover:-translate-y-0.5 transition-transform duration-300 shadow-[0_6px_30px_rgba(255,207,0,0.35)] flex-shrink-0">
       Cotiza tu evento
     </a>
 
-    <button id="menu-btn" class="md:hidden text-[#ffcf00] focus:outline-none" aria-label="Abrir menú">
+    <button id="menu-btn" class="lg:hidden text-[#ffcf00] focus:outline-none" aria-label="Abrir menú">
       <span id="menu-icon" class="material-symbols-outlined text-4xl" style="font-variation-settings:'FILL' 1">menu</span>
     </button>
   </div>
 
-  <div id="mobile-menu" class="md:hidden bg-[#161616] border-t border-white/5 px-6">
-    <div class="flex flex-col gap-0 py-3">
-      <a href="#inicio"   class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-white border-b border-white/8 hover:text-[#ffcf00] transition-colors">Inicio</a>
-      <a href="#menu"     class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Menú</a>
-      <a href="#galeria"  class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Galería</a>
-      <a href="#faq"      class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">FAQ</a>
-      <a href="#nosotros" class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Nosotros</a>
-      <a href="#contacto" class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 hover:text-[#ffcf00] transition-colors">Contacto</a>
+  <div id="mobile-menu" class="lg:hidden bg-[#161616] border-t border-white/5 px-6">
+    <div class="flex flex-col gap-0 py-3 max-h-[70svh] overflow-y-auto">
+      <a href="#inicio"        class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-white border-b border-white/8 hover:text-[#ffcf00] transition-colors">Inicio</a>
+      <a href="#como-funciona" class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Cómo funciona</a>
+      <a href="#menu"          class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Menú</a>
+      <a href="#ocasiones"     class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Ocasiones</a>
+      <a href="#galeria"       class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Galería</a>
+      <a href="#cobertura"     class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Cobertura</a>
+      <a href="#faq"           class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">FAQ</a>
+      <a href="#nosotros"      class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 border-b border-white/8 hover:text-[#ffcf00] transition-colors">Nosotros</a>
+      <a href="#contacto"      class="mobile-link font-headline font-extrabold uppercase tracking-tighter text-lg py-3.5 text-gray-300 hover:text-[#ffcf00] transition-colors">Contacto</a>
     </div>
   </div>
 </nav>
@@ -326,7 +333,7 @@
     </h1>
 
     <p class="reveal reveal-d2 font-body text-gray-300 text-base md:text-xl max-w-2xl text-center leading-relaxed font-medium">
-      Llevamos el carro a tu casa, hacemos las papas frente a tus invitados y nos encargamos de todo. Tú celebras, nosotros cocinamos. Papas fritas, churros, nuggets y aros de cebolla recién hechos para cumpleaños, matrimonios y eventos de empresa en Santiago.
+      Llevamos el carro, freímos frente a tus invitados y nos encargamos de todo. Papas fritas, churros, nuggets y aros de cebolla recién hechos para cumpleaños, matrimonios y eventos en Santiago.
     </p>
 
     <!-- CTA — visible above fold on 390px -->
@@ -358,50 +365,50 @@
       Cómo funciona<br><span class="text-[#ffcf00] italic">en 3 pasos</span>
     </h2>
     <p class="reveal reveal-d1 font-body text-gray-400 text-base md:text-lg max-w-2xl mb-10 md:mb-14 leading-relaxed">
-      Reservar el carrito de papas fritas con Papalones es simple y sin sorpresas. Así trabajamos en Santiago:
+      Reservar con Papalones es simple y sin sorpresas. Así trabajamos:
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
       <div class="reveal bg-[#161616] border border-white/8 rounded-2xl md:rounded-[2rem] p-6 md:p-8 relative">
         <span class="menu-num" style="position:static;display:block;margin-bottom:.5rem;color:rgba(255,207,0,.18)">1</span>
         <h3 class="font-headline font-extrabold text-xl md:text-2xl text-white uppercase tracking-tighter mb-3 italic">Cotizas</h3>
-        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed">Nos escribes por WhatsApp con la fecha, tu comuna y cuántos invitados esperas. Te respondemos el mismo día con una propuesta clara y te decimos cuántas porciones pedir para que no falte comida ni pagues de más.</p>
+        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed">Nos escribes por WhatsApp con fecha, comuna y N.° de invitados. Respondemos el mismo día con una propuesta clara y la cantidad de porciones recomendada.</p>
       </div>
       <div class="reveal reveal-d1 bg-[#161616] border border-white/8 rounded-2xl md:rounded-[2rem] p-6 md:p-8 relative">
         <span class="menu-num" style="position:static;display:block;margin-bottom:.5rem;color:rgba(255,207,0,.18)">2</span>
         <h3 class="font-headline font-extrabold text-xl md:text-2xl text-white uppercase tracking-tighter mb-3 italic">Reservas tu fecha</h3>
-        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed">Confirmas la propuesta con un abono del 50% del total y bloqueamos el día solo para ti. Recomendamos reservar con al menos 1 semana de anticipación para asegurar la disponibilidad de tu fecha.</p>
+        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed">Confirmas con un abono del 50% y bloqueamos la fecha solo para ti. Recomendamos reservar con al menos 1 semana de anticipación.</p>
       </div>
       <div class="reveal reveal-d2 bg-[#161616] border border-white/8 rounded-2xl md:rounded-[2rem] p-6 md:p-8 relative">
         <span class="menu-num" style="position:static;display:block;margin-bottom:.5rem;color:rgba(255,207,0,.18)">3</span>
         <h3 class="font-headline font-extrabold text-xl md:text-2xl text-white uppercase tracking-tighter mb-3 italic">Llegamos y montamos</h3>
-        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed">El día del evento llegamos 30 minutos antes, instalamos el carro y empezamos a freír cuando tú nos digas. Al terminar, dejamos el espacio limpio y nos vamos.</p>
+        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed">Llegamos 30 minutos antes, instalamos el carro y freímos cuando nos digas. Al terminar, dejamos todo limpio.</p>
       </div>
     </div>
 
     <p class="reveal reveal-d3 font-body text-gray-400 text-base md:text-lg max-w-3xl mt-8 md:mt-12 leading-relaxed">
-      La persona que entra a tu casa es parte de nuestro equipo: presentable, ordenada y simpática. No tienes que estar pendiente de nada durante tu propia fiesta.
+      Quien llega a tu casa es parte de nuestro equipo: presentable, ordenada y simpática. Tú no tienes que estar pendiente de nada.
     </p>
   </div>
 </section>
 
 <!-- ── QUÉ INCLUYE ─────────────────────────────────────── -->
-<section class="py-12 md:py-20 px-4 md:px-12 bg-[#161616] border-y border-white/5">
+<section id="incluye" class="py-12 md:py-20 px-4 md:px-12 bg-[#161616] border-y border-white/5">
   <div class="max-w-screen-2xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-center">
     <div>
       <h2 class="reveal font-headline font-extrabold text-3xl sm:text-4xl md:text-6xl text-white uppercase tracking-tighter leading-[0.92] mb-6">
         Qué incluye nuestro<br><span class="text-[#ffcf00] italic">carrito de papas fritas</span>
       </h2>
       <p class="reveal reveal-d1 font-body text-gray-400 text-base md:text-lg leading-relaxed">
-        Cocinamos en el momento, a la vista de tus invitados, con aceite limpio y productos de buena calidad. Nada se prepara horas antes ni llega frío. Esa es la diferencia que se nota en el primer bocado.
+        Cocinamos en el momento, a la vista de tus invitados, con aceite limpio y productos de calidad. Nada llega frío ni recalentado.
       </p>
     </div>
     <div class="reveal reveal-d1 space-y-3">
       <div class="flex items-start gap-3 text-gray-300 text-sm md:text-base"><span class="w-6 h-6 mt-0.5 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>El carro y todo el equipo, listo para operar en tu casa o salón.</div>
-      <div class="flex items-start gap-3 text-gray-300 text-sm md:text-base"><span class="w-6 h-6 mt-0.5 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>Un operador de nuestro equipo que cocina, atiende a tus invitados y mantiene el orden.</div>
-      <div class="flex items-start gap-3 text-gray-300 text-sm md:text-base"><span class="w-6 h-6 mt-0.5 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>Papas (y lo que sumes al menú) recién hechas en el momento, nunca recalentadas.</div>
+      <div class="flex items-start gap-3 text-gray-300 text-sm md:text-base"><span class="w-6 h-6 mt-0.5 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>Un operador de nuestro equipo que cocina y atiende a tus invitados.</div>
+      <div class="flex items-start gap-3 text-gray-300 text-sm md:text-base"><span class="w-6 h-6 mt-0.5 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>Todo recién hecho en el momento, nunca recalentado.</div>
       <div class="flex items-start gap-3 text-gray-300 text-sm md:text-base"><span class="w-6 h-6 mt-0.5 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>Salsas incluidas: ketchup, mayonesa y mostaza (y azúcar flor para los churros).</div>
-      <div class="flex items-start gap-3 text-gray-300 text-sm md:text-base"><span class="w-6 h-6 mt-0.5 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>Montaje, operación durante todo el evento y limpieza del espacio al terminar.</div>
+      <div class="flex items-start gap-3 text-gray-300 text-sm md:text-base"><span class="w-6 h-6 mt-0.5 rounded-full bg-[#ffcf00]/15 flex items-center justify-center text-[#ffcf00] text-xs font-bold flex-shrink-0">✓</span>Montaje, operación durante el evento y limpieza al terminar.</div>
     </div>
   </div>
 </section>
@@ -415,7 +422,7 @@
         Nuestro menú<br><span class="text-[#ffcf00] italic">&amp; cotizaciones</span>
       </h2>
       <p class="reveal reveal-d1 font-body text-gray-500 text-base md:text-lg w-full md:w-1/3 text-left md:text-right italic leading-relaxed">
-        Las papas son nuestro producto estrella. Sumas churros, nuggets y aros de cebolla y armas el menú según tu evento. Todo recién hecho en el mismo carro.
+        Las papas son nuestro producto estrella. Suma churros, nuggets y aros de cebolla y arma tu menú. Todo recién hecho en el carro.
       </p>
     </div>
 
@@ -430,7 +437,7 @@
         <div class="p-3 md:p-8 flex flex-col justify-center relative">
           <span class="menu-num">01</span>
           <h3 class="font-headline font-extrabold text-xs md:text-3xl text-white uppercase tracking-tighter mb-1 md:mb-3 italic">Papas Fritas</h3>
-          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Papas fritas clásicas, delgadas y crujientes, en porciones de 50 gramos en bolsas papel mantequilla. Combínalas con Ketchup, Mayonesa y Mostaza.</p>
+          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Papas clásicas, delgadas y crujientes. Porciones de 50 g en bolsa papel mantequilla, con ketchup, mayonesa y mostaza.</p>
         </div>
       </div>
 
@@ -444,7 +451,7 @@
         <div class="p-3 md:p-8 flex flex-col justify-center relative">
           <span class="menu-num">02</span>
           <h3 class="font-headline font-extrabold text-xs md:text-3xl text-white uppercase tracking-tighter mb-1 md:mb-3 italic">Nuggets</h3>
-          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Nuggets de pollo ultra crocantes, servidos en porciones de 6 nuggets por porción en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
+          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Nuggets de pollo ultra crocantes, 6 por porción, en platos de cartón reciclables, con ketchup, mayonesa y mostaza.</p>
         </div>
       </div>
 
@@ -458,7 +465,7 @@
         <div class="p-3 md:p-8 flex flex-col justify-center relative">
           <span class="menu-num">03</span>
           <h3 class="font-headline font-extrabold text-xs md:text-3xl text-white uppercase tracking-tighter mb-1 md:mb-3 italic">Aros de Cebolla</h3>
-          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Nuestros Aros de Cebolla son la mezcla perfecta entre un dulce natural suave y el clásico sabor caramelizado. Servidos en porciones de 7 aros en platos de cartón ecológicos y reciclables. Combínalos con Ketchup, Mayonesa y Mostaza.</p>
+          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Dulce natural suave y sabor caramelizado clásico. 7 aros por porción, en platos de cartón reciclables, con ketchup, mayonesa y mostaza.</p>
         </div>
       </div>
 
@@ -472,7 +479,7 @@
         <div class="p-3 md:p-8 flex flex-col justify-center relative">
           <span class="menu-num">04</span>
           <h3 class="font-headline font-extrabold text-xs md:text-3xl text-white uppercase tracking-tighter mb-1 md:mb-3 italic">Churros</h3>
-          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">La guinda del postre: churros crujientes y calientes para cerrar tu celebración con algo dulce. Servidos en porciones de 4 churros en platos de cartón ecológicos y reciclables, acompañados con azúcar flor.</p>
+          <p class="font-body text-gray-500 text-[10px] md:text-base leading-snug md:leading-relaxed">Crujientes y calientes para el momento dulce. 4 churros por porción, en platos de cartón reciclables, con azúcar flor.</p>
         </div>
       </div>
 
@@ -516,17 +523,17 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
       <a href="/cumpleanos" class="reveal group bg-[#161616] border border-white/8 rounded-2xl md:rounded-[2rem] p-6 md:p-8 hover:border-[#ffcf00]/30 transition-colors duration-300 flex flex-col">
         <h3 class="font-headline font-extrabold text-2xl md:text-3xl text-white uppercase tracking-tighter mb-3 italic">Cumpleaños infantiles</h3>
-        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed mb-6 flex-1">Es lo que más celebramos. Papas y nuggets que los niños piden de nuevo, churros de postre y unos papás tranquilos disfrutando con sus invitados en vez de cocinando.</p>
+        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed mb-6 flex-1">Es lo que más celebramos: papas y nuggets que los niños repiten, churros de postre y papás disfrutando en vez de cocinar.</p>
         <span class="font-headline font-extrabold text-sm uppercase tracking-widest text-[#ffcf00] flex items-center gap-2">Ver carrito para cumpleaños <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
       </a>
       <a href="/matrimonios" class="reveal reveal-d1 group bg-[#161616] border border-white/8 rounded-2xl md:rounded-[2rem] p-6 md:p-8 hover:border-[#ffcf00]/30 transition-colors duration-300 flex flex-col">
         <h3 class="font-headline font-extrabold text-2xl md:text-3xl text-white uppercase tracking-tighter mb-3 italic">Matrimonios</h3>
-        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed mb-6 flex-1">Una estación de papas recién hechas para la previa o para después de la cena, cuando los invitados vuelven a tener hambre y quieren algo rico para seguir la fiesta. Preparamos volumen sin perder calidad.</p>
+        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed mb-6 flex-1">Estación de papas recién hechas para la previa o después de la cena, cuando los invitados quieren seguir la fiesta. Preparamos volumen sin perder calidad.</p>
         <span class="font-headline font-extrabold text-sm uppercase tracking-widest text-[#ffcf00] flex items-center gap-2">Ver carrito para matrimonios <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
       </a>
       <a href="/eventos" class="reveal reveal-d2 group bg-[#161616] border border-white/8 rounded-2xl md:rounded-[2rem] p-6 md:p-8 hover:border-[#ffcf00]/30 transition-colors duration-300 flex flex-col">
         <h3 class="font-headline font-extrabold text-2xl md:text-3xl text-white uppercase tracking-tighter mb-3 italic">Eventos de empresa</h3>
-        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed mb-6 flex-1">Celebraciones de fin de año, aniversarios o el día de la empresa. Llegamos a tu oficina o lugar del evento y atendemos a todo el equipo. Emitimos factura con IVA para empresas.</p>
+        <p class="font-body text-gray-400 text-sm md:text-base leading-relaxed mb-6 flex-1">Fin de año, aniversarios o el día de la empresa. Llegamos a tu oficina y atendemos a todo el equipo. Emitimos factura con IVA.</p>
         <span class="font-headline font-extrabold text-sm uppercase tracking-widest text-[#ffcf00] flex items-center gap-2">Ver carrito para eventos <span class="material-symbols-outlined text-base group-hover:translate-x-1 transition-transform">arrow_forward</span></span>
       </a>
     </div>
@@ -604,7 +611,7 @@
       La duda número uno antes de cualquier fiesta es "¿alcanzará la comida?". Con Papalones no te quedas adivinando.
     </p>
     <p class="reveal reveal-d2 font-body text-gray-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed mb-10">
-      Cuando cotizas, te recomendamos cuántas porciones de papas fritas pedir según tu número de invitados, si son niños o adultos, y si las papas serán el plato principal o un acompañamiento. Así llegas justo: nadie se queda con hambre y tú no pagas por comida que sobra.
+      Al cotizar te recomendamos cuántas porciones pedir según tus invitados y si las papas son plato principal o acompañamiento. Así nadie se queda con hambre y tú no pagas de más.
     </p>
     <a href="https://wa.me/56986087712?text=Hola%20Papalones%2C%20quiero%20que%20me%20asesoren%20las%20porciones%20para%20mi%20evento." target="_blank" rel="noopener" class="reveal reveal-d3 inline-block cta-shimmer text-black rounded-full px-10 py-4 font-headline font-extrabold uppercase tracking-widest text-base hover:-translate-y-1 transition-transform duration-300 shadow-[0_10px_40px_rgba(255,207,0,0.3)]">
       Pídenos tu cálculo de porciones
@@ -669,7 +676,7 @@
       Comunas donde<br><span class="text-[#ffcf00] italic">llevamos el carrito</span>
     </h2>
     <p class="reveal reveal-d1 font-body text-gray-400 text-base md:text-lg max-w-2xl mb-10 md:mb-14 leading-relaxed">
-      Cubrimos toda la Región Metropolitana. Llevamos el carrito de papas fritas a tu casa o salón en Santiago, con un recargo por distancia según la comuna:
+      Cubrimos toda la Región Metropolitana, con un recargo por distancia según la comuna:
     </p>
 
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
@@ -822,13 +829,13 @@
           Sobre Nosotros &amp; eventos<br><span class="text-[#ffcf00]">Papalones</span>
         </h2>
         <p class="reveal reveal-d1 font-body text-gray-400 text-base md:text-lg mb-4 leading-relaxed">
-          Empezamos con tres amigos, un carrito de papas fritas y muchas ganas de hacer algo distinto. Lo que nació como una idea entre amigos hoy es PAPALONES: un equipo comprometido que lleva sabor y buena onda a cada evento.
+          Empezamos con tres amigos, un carrito y muchas ganas de hacer algo distinto. Hoy PAPALONES es un equipo comprometido que lleva sabor y buena onda a cada evento.
         </p>
         <p class="reveal reveal-d2 font-body text-gray-400 text-base md:text-lg mb-4 leading-relaxed">
-          Con el tiempo fuimos creciendo, sumamos nuggets, aros de cebolla y churros al menú, y también fuimos sumando personas. Esos amigos que se fueron uniendo con el tiempo hoy son mucho más que eso: son chefs dedicados que ponen el mismo cariño en cada celebración.
+          Con el tiempo sumamos nuggets, aros de cebolla y churros al menú, y también sumamos personas: hoy son chefs dedicados que ponen el mismo cariño en cada celebración.
         </p>
         <p class="reveal reveal-d3 font-body text-gray-400 text-base md:text-lg mb-6 leading-relaxed">
-          Nos especializamos en cumpleaños, celebraciones de fin de año, fiestas y eventos corporativos. Nos adaptamos a cada ocasión porque sabemos que detrás de cada evento hay algo importante que celebrar, y eso merece lo mejor.
+          Nos especializamos en cumpleaños, fin de año, fiestas y eventos corporativos, adaptándonos a cada ocasión porque sabemos que hay algo importante que celebrar.
         </p>
         <div class="reveal reveal-d4 space-y-3">
           <div class="flex items-center gap-3 text-gray-300 font-medium text-sm">
@@ -902,7 +909,7 @@
       </a>
       <div class="hidden md:block w-1.5 h-1.5 rounded-full bg-gray-700"></div>
       <a href="https://instagram.com/papa_lones" target="_blank" rel="noopener" class="reveal reveal-d1 flex items-center gap-3 text-gray-300 hover:text-[#ffcf00] transition-colors group">
-        <span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">alternate_email</span>
+        <svg class="w-[30px] h-[30px] flex-shrink-0 group-hover:scale-110 transition-transform" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
         <span class="font-headline font-extrabold text-xl md:text-2xl tracking-tight">@papa_lones</span>
       </a>
       <div class="hidden md:block w-1.5 h-1.5 rounded-full bg-gray-700"></div>
